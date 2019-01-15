@@ -1,0 +1,23 @@
+a:link,
+a:visited {
+  color: $color-blue;
+  text-decoration: none;
+  padding-bottom: .1rem;
+  -webkit-transition: border-bottom 0.2s, color 0.2s;
+  transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+  color: $color-yellow;
+}
+
+.btn:link,
+.btn:visited {
+  border-bottom: none;
+}
+
+.btn:hover,
+.btn:active {
+  border-bottom: none;
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *,
 *::after,
 *::before {
@@ -24,3 +25,31 @@ section {
     padding: 8rem 0;
 }
 
+=======
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    // defines what 1rem is
+    font-size: 62.5%;
+    box-sizing: inherit;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 8rem 0;
+}
+
+>>>>>>> 27ff8a0f3d2f5a039d2b47d779c8c180dac45b79

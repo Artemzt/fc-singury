@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 a:link,
 a:visited {
   color: $color-blue;
@@ -20,4 +21,28 @@ a:active {
 .btn:hover,
 .btn:active {
   border-bottom: none;
+=======
+a:link,
+a:visited {
+  color: $color-blue;
+  text-decoration: none;
+  padding-bottom: .1rem;
+  -webkit-transition: border-bottom 0.2s, color 0.2s;
+  transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+  color: $color-yellow;
+}
+
+.btn:link,
+.btn:visited {
+  border-bottom: none;
+}
+
+.btn:hover,
+.btn:active {
+  border-bottom: none;
+>>>>>>> 27ff8a0f3d2f5a039d2b47d779c8c180dac45b79
 }

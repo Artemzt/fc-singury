@@ -1,0 +1,14 @@
+{
+  "name": "fc-singury",
+  "version": "1.0.0",
+  "description": "Singury's football team site",
+  "main": "index.html",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss resources/css/style.css -w"
+  },
+  "author": "artemso",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

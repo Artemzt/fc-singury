@@ -1,0 +1,25 @@
+
+.label__container {
+  position: relative;
+  overflow: hidden;
+
+  .label {
+    background-image: linear-gradient(to right bottom,
+            rgba($color-blue-light-2, .85),
+            rgba($color-blue-light-1, .85));
+    display: inline-block;
+    padding: .5rem 4rem;
+    z-index: 5;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 1rem;
+    left: -3rem;
+    transform: rotate(-40deg);
+
+    &__text {
+      color: $color-yellow;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+  }
+}

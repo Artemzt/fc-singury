@@ -124,9 +124,14 @@ a:active {
 .history-item {
   display: inline-block;
   position: relative;
-  width: 20%; }
+  width: 20%;
+  /*&__img--cup {
+    width: 100%;
+    display: inline-block;
+    padding: 5rem 3rem;
+  }*/ }
   .history-item__heading {
-    font-size: 2.8rem;
+    font-size: 2.3rem;
     font-weight: 300;
     text-transform: uppercase;
     color: #fff;
@@ -147,20 +152,16 @@ a:active {
       .history-item__heading-span--yellow {
         background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
   .history-item__img {
-    width: 100%;
-    display: inline-block;
-    padding: 5rem 3rem; }
-  .history-item__img--cup {
-    width: 100%;
+    width: 90%;
     display: inline-block;
     padding: 5rem 3rem; }
   .history-item__table-position {
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 12rem;
+    font-size: 7rem;
     font-weight: 600;
-    transform: translate(-50%, -90%);
+    transform: translate(-70%, -90%);
     transition: all .2s;
     background-image: linear-gradient(to right, #0C5B93, #44B6D4);
     -webkit-background-clip: text;

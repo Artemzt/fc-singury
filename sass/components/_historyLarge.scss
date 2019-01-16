@@ -11,7 +11,7 @@
 
 
   &__heading {
-    font-size: 2.8rem;
+    font-size: 2.3rem;
     font-weight: 300;
     text-transform: uppercase;
 
@@ -50,23 +50,23 @@
 
 
   &__img {
-    width: 100%;
+    width: 90%;
     display: inline-block;
     padding: 5rem 3rem;
   }
 
-  &__img--cup {
+  /*&__img--cup {
     width: 100%;
     display: inline-block;
     padding: 5rem 3rem;
-  }
+  }*/
 
   &__table-position {position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 12rem;
+    font-size: 7rem;
     font-weight: 600;
-    transform: translate(-50%, -90%);
+    transform: translate(-70%, -90%);
     transition: all .2s;
 
     background-image: linear-gradient(to right, $color-blue-light-1, $color-blue-light-2);

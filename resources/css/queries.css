@@ -7,13 +7,6 @@
         width: 100%;
     }
 
-    .history-block {
-        white-space: nowrap;
-        overflow-x: scroll;
-    }
-    .history-item {
-        min-width: 30rem;
-    }
 
 
 }
@@ -21,6 +14,14 @@
 /* Small tablet to big tablet: from 768px to 1023px */
 @media only screen and (max-width: 1023px) {
     section {padding: 4rem 0;}
+
+    .history-block {
+        white-space: nowrap;
+        overflow-x: scroll;
+    }
+    .history-item {
+        min-width: 25rem;
+    }
 }
 
 /* Small phones to small tablets: from 481px to 767px */

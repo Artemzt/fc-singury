@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .section-history {
   padding: 0;
   background-color: $color-section-background;
@@ -6,13 +6,4 @@
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
-=======
-.section-history {
-  padding: 0;
-  background-color: $color-section-background;
-  background-image: linear-gradient(to right bottom, rgba($color-black, 0.7), rgba($color-black, 0.7)), url("../img/history-back.jpg");
-  background-position: center;
-  background-size: cover;
-  background-blend-mode: darken;
->>>>>>> 27ff8a0f3d2f5a039d2b47d779c8c180dac45b79
 }

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 .history-block {
   list-style: none;
@@ -64,7 +64,7 @@
   &__table-position {position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 6rem;
+    font-size: 12rem;
     font-weight: 600;
     transform: translate(-50%, -90%);
     transition: all .2s;
@@ -85,91 +85,3 @@
 }
 
 
-=======
-
-.history-block {
-  list-style: none;
-  font-size: 0;
-}
-.history-item {
-  display: inline-block;
-  position: relative;
-  width: 20%;
-
-
-  &__heading {
-    font-size: 2.8rem;
-    font-weight: 300;
-    text-transform: uppercase;
-
-    color: #fff;
-    position: absolute;
-    width: 75%;
-
-    &--top {
-      top: 2rem;
-      left: 1rem;
-      text-align: left;
-    }
-
-    &--bottom {
-      bottom: 2rem;
-      right: 1rem;
-      text-align: right;
-    }
-
-    &-span {
-      padding: .1rem 1.5rem;
-
-      &--blue {
-        background-image: linear-gradient(to right bottom,
-                rgba($color-blue, 0.85),
-                rgba($color-blue-light-1, 0.85));
-      }
-
-      &--yellow {
-        background-image: linear-gradient(to right bottom,
-                rgba(255, 185, 0, 0.85),
-                rgba(255, 119, 48, 0.85));
-      }
-    }
-  }
-
-
-  &__img {
-    width: 100%;
-    display: inline-block;
-    padding: 5rem 3rem;
-  }
-
-  &__img--cup {
-    width: 100%;
-    display: inline-block;
-    padding: 5rem 3rem;
-  }
-
-  &__table-position {position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 6rem;
-    font-weight: 600;
-    transform: translate(-50%, -90%);
-    transition: all .2s;
-
-    background-image: linear-gradient(to right, $color-blue-light-1, $color-blue-light-2);
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: .5rem 1rem 2rem rgba($color-black, .2 );
-
-    &:hover {
-      transform: scale3d(1.5,1.5,1);
-      background-image: linear-gradient(to right, $color-white, $color-section-background);
-      text-shadow: .5rem 1rem 2rem rgba($color-black, .2 );
-      font-weight: 300;
-
-    }
-  }
-}
-
-
->>>>>>> 27ff8a0f3d2f5a039d2b47d779c8c180dac45b79

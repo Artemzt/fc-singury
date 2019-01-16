@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 @mixin clearfix {
   &::after {
     content: "";
@@ -92,15 +92,18 @@
 @mixin card {
   position: relative;
 
-
-  &:hover .player-front{ transform: rotateY(180deg); }
-  &:hover .player-back { transform: rotateY(360deg); }
+  &:hover .player-front {
+    transform: rotateY(180deg);
+  }
+  &:hover .player-back {
+    transform: rotateY(360deg);
+  }
 
   .player-face {
     width: 100%;
     height: 100%;
     transition: transform 1s;
-    backface-visibility:hidden;
+    backface-visibility: hidden;
 
     & img {
       width: 100%;
@@ -109,13 +112,12 @@
   }
 
   .player-back {
-    transform: rotateY( 180deg );
+    transform: rotateY(180deg);
     position: relative;
     width: 100%;
     height: auto;
 
-
-    & figure{
+    & figure {
       background-image: linear-gradient(rgba($color-black, 0.585), rgba($color-black, 0.585)), url(../img/players/ivanov-back.png);
       background-size: cover;
       background-position: center;
@@ -126,133 +128,4 @@
       }
     }
   }
-=======
-@mixin clearfix {
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-
-@mixin running_line {
-  /*<div class="mdl-progress-container">
-<div class="mdl-progress">
-<div class="progressbar bar" style="width: 0%;"></div>
-<div class="bufferbar bar" style="width: 100%;"></div>
-</div>
-</div>
-*/
-  li a:hover,
-  li a:active {
-    .mdl-progress-container{
-      visibility: visible;
-      .mdl-progress {
-        .bar{
-          &.progressbar{
-            animation-play-state : running;
-            -webkit-animation-play-state: running;
-          }
-        }
-      }
-    }
-  }
-
-  @keyframes anim_progressbar{
-    0% {
-      left: 0%;
-      width: 0;
-    }
-    25% {
-      left: 0;
-      width: 30%;
-    }
-    50% {
-      left: 25%;
-      width: 75%;
-    }
-    75% {
-      left: 100%;
-      width: 0;
-    }
-  }
-
-  .mdl-progress-container{
-    padding-top: .5rem;
-    visibility: hidden;
-  }
-  .mdl-progress {
-    position: relative;
-    height: 2px;
-    .bar{
-      display: block;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 0;
-      //transition: width .2s cubic-bezier(.4,0,.2,1);
-      &.bufferbar {
-        background-image: linear-gradient(to right,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(to right,#3f51b5 ,#3f51b5);
-        z-index: 0;
-        left: 0;
-        display: none;
-      }
-      &.progressbar{
-        background-color: $color-yellow;
-        z-index: 1;
-        left: 0;
-        animation-name: anim_progressbar;
-        animation-duration: 1.4s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        animation-play-state : paused;
-        //Safari 11.0.1 bug workaround
-        -webkit-animation-play-state: running;
-        &.green{
-          background-color: #458d82;
-        }
-      }
-    }
-  }
-}
-
-@mixin card {
-  position: relative;
-
-
-  &:hover .player-front{ transform: rotateY(180deg); }
-  &:hover .player-back { transform: rotateY(360deg); }
-
-  .player-face {
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    backface-visibility:hidden;
-
-    & img {
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  .player-back {
-    transform: rotateY( 180deg );
-    position: relative;
-    width: 100%;
-    height: auto;
-
-
-    & figure{
-      background-image: linear-gradient(rgba($color-black, 0.585), rgba($color-black, 0.585)), url(../img/players/ivanov-back.png);
-      background-size: cover;
-      background-position: center;
-
-      /*hack to display background image above*/
-      & img {
-        visibility: hidden;
-      }
-    }
-  }
->>>>>>> 27ff8a0f3d2f5a039d2b47d779c8c180dac45b79
 }

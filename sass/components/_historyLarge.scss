@@ -8,6 +8,15 @@
   display: inline-block;
   position: relative;
   width: 20%;
+  text-align: center;
+
+  &__custom--left {
+    text-align: left;
+  }
+
+  &__custom--right {
+    text-align: right;
+  }
 
 // SECTION HEADINGS
   &__heading {
@@ -64,19 +73,9 @@
 
   &__img {
     display: inline-block;
-    width: auto;
-    height: 25%;
-    margin: 5rem 3rem;
-
-    &--left {
-      margin-left: 0;
-
-    }
-
-    &--right {
-      margin-right: 0;
-
-    }
+    width: 60%;
+    height: auto;
+    margin: 5rem 0;
   }
 
 
@@ -84,9 +83,9 @@
   &__table-position {position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -100%);
     font-size: 7rem;
     font-weight: 600;
-    transform: translate(-55%, -90%);
     transition: all .8s;
 
     background-image: linear-gradient(to right, $color-blue-light-1, $color-blue-light-2);

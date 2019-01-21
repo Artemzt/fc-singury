@@ -9,7 +9,7 @@
   position: relative;
   width: 20%;
 
-
+// SECTION HEADINGS
   &__heading {
     font-size: 2.3rem;
     font-weight: 300;
@@ -19,16 +19,29 @@
     position: absolute;
     width: 75%;
 
-    &--top {
+    &--top-left {
       top: 2rem;
       left: 1rem;
       text-align: left;
+
     }
 
-    &--bottom {
+    &--top-right {
+      text-align: right;
+      right: 1rem;
+      top: 2rem;
+    }
+
+    &--bottom-right {
       bottom: 2rem;
       right: 1rem;
       text-align: right;
+    }
+
+    &--bottom-left {
+      text-align: left;
+      left: 1rem;
+      bottom: 2rem;
     }
 
     &-span {
@@ -50,24 +63,31 @@
 
 
   &__img {
-    width: 90%;
     display: inline-block;
-    padding: 5rem 3rem;
+    width: auto;
+    height: 25%;
+    margin: 5rem 3rem;
+
+    &--left {
+      margin-left: 0;
+
+    }
+
+    &--right {
+      margin-right: 0;
+
+    }
   }
 
-  /*&__img--cup {
-    width: 100%;
-    display: inline-block;
-    padding: 5rem 3rem;
-  }*/
 
+//TABLE POSITION TEXT
   &__table-position {position: absolute;
     top: 50%;
     left: 50%;
     font-size: 7rem;
     font-weight: 600;
-    transform: translate(-70%, -90%);
-    transition: all .2s;
+    transform: translate(-55%, -90%);
+    transition: all .8s;
 
     background-image: linear-gradient(to right, $color-blue-light-1, $color-blue-light-2);
     -webkit-background-clip: text;
@@ -75,7 +95,7 @@
     text-shadow: .5rem 1rem 2rem rgba($color-black, .2 );
 
     &:hover {
-      transform: scale3d(1.5,1.5,1);
+      transform: scale(1);
       background-image: linear-gradient(to right, $color-white, $color-section-background);
       text-shadow: .5rem 1rem 2rem rgba($color-black, .2 );
       font-weight: 300;

@@ -124,12 +124,7 @@ a:active {
 .history-item {
   display: inline-block;
   position: relative;
-  width: 20%;
-  /*&__img--cup {
-    width: 100%;
-    display: inline-block;
-    padding: 5rem 3rem;
-  }*/ }
+  width: 20%; }
   .history-item__heading {
     font-size: 2.3rem;
     font-weight: 300;
@@ -137,14 +132,22 @@ a:active {
     color: #fff;
     position: absolute;
     width: 75%; }
-    .history-item__heading--top {
+    .history-item__heading--top-left {
       top: 2rem;
       left: 1rem;
       text-align: left; }
-    .history-item__heading--bottom {
+    .history-item__heading--top-right {
+      text-align: right;
+      right: 1rem;
+      top: 2rem; }
+    .history-item__heading--bottom-right {
       bottom: 2rem;
       right: 1rem;
       text-align: right; }
+    .history-item__heading--bottom-left {
+      text-align: left;
+      left: 1rem;
+      bottom: 2rem; }
     .history-item__heading-span {
       padding: .1rem 1.5rem; }
       .history-item__heading-span--blue {
@@ -152,23 +155,28 @@ a:active {
       .history-item__heading-span--yellow {
         background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
   .history-item__img {
-    width: 90%;
     display: inline-block;
-    padding: 5rem 3rem; }
+    width: auto;
+    height: 25%;
+    margin: 5rem 3rem; }
+    .history-item__img--left {
+      margin-left: 0; }
+    .history-item__img--right {
+      margin-right: 0; }
   .history-item__table-position {
     position: absolute;
     top: 50%;
     left: 50%;
     font-size: 7rem;
     font-weight: 600;
-    transform: translate(-70%, -90%);
-    transition: all .2s;
+    transform: translate(-55%, -90%);
+    transition: all .8s;
     background-image: linear-gradient(to right, #0C5B93, #44B6D4);
     -webkit-background-clip: text;
     color: transparent;
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
     .history-item__table-position:hover {
-      transform: scale3d(1.5, 1.5, 1);
+      transform: scale(1);
       background-image: linear-gradient(to right, #fff, #f4f4f4);
       text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
       font-weight: 300; }

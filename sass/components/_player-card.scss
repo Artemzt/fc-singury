@@ -2,16 +2,62 @@
 .player-section {
   font-size: 0;
 
-  & li{
+  @include respond(tab-port) {
+    display: none;
+  }
+
+  &__card {
+    position: relative;
+    height: .1rem;
     display: inline-block;
     width: 25%;
     padding: 0 .6rem;
     margin-top: 1.2rem;
+
+    @include respond(tab-port) {
+      width: 25%;
+    }
+
+    @include respond(phone) {
+      width: 50%;
+    }
+
+    &:hover .player-front {
+      transform: rotateY(180deg);
+    }
+    &:hover .player-back {
+      transform: rotateY(360deg);
+    }
+
+    .player-face {
+      width: 100%;
+      height: 100%;
+      transition: transform 1s;
+      backface-visibility: hidden;
+
+      & img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .player-back {
+      transform: rotateY(180deg);
+      position: relative;
+      width: 100%;
+      height: auto;
+
+      & figure {
+        background-image: linear-gradient(rgba($color-black, 0.585), rgba($color-black, 0.585)), url(../img/players/ivanov-back.png);
+        background-size: cover;
+        background-position: center;
+
+        /*hack to display background image above*/
+        & img {
+          visibility: hidden;
+        }
+      }
+    }
   }
 }
 
-.card {
-  @include card;
-  width: auto;
-  height: .1rem;
-}

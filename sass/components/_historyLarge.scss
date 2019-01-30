@@ -1,14 +1,51 @@
 
-
+.history-slider__2017 {display: none}
 .history-block {
   list-style: none;
   font-size: 0;
+
+  @include respond(tab-port) {
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
 }
 .history-item {
-  display: inline-block;
+  //display: inline-block;
+  float: left;
+
+
   position: relative;
   width: 20%;
   text-align: center;
+
+  @include clearfix;
+
+  &__large {
+    width: 60%;
+  }
+
+  .years-container {
+    position: relative;
+  }
+
+  .year__photo {
+    width: 100%;
+    height: auto;
+    position: absolute;
+
+    &--2017 {
+      top: 0;
+      left: 0;
+    }
+
+  }
+
+
+
+
+  @include respond(tab-port) {
+    min-width: 25rem;
+  }
 
   &__custom--left {
     text-align: left;
@@ -92,6 +129,8 @@
     -webkit-background-clip: text;
     color: transparent;
     text-shadow: .5rem 1rem 2rem rgba($color-black, .2 );
+
+    @include respond(tab-land) {font-size: 5rem;}
 
     &:hover {
       transform: scale(1);

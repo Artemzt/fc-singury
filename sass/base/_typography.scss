@@ -23,6 +23,11 @@ h1 {
     font-size: 3.5rem;
     font-weight: 300;
     letter-spacing: .1rem;
+
+
+    @include respond(phone) {
+        font-size: 2.5rem;
+    }
 }
 
 h2 {
@@ -55,14 +60,13 @@ h3 {
 
 .start-text-block {
     position: absolute;
-    width: 114rem;
+    width: 100%;
     top: 80%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-
     & img {
-        width: 20rem;
+        width: 17rem;
         height: auto;
         border-radius: 5rem;
         border: .2rem solid $color-yellow;
@@ -96,5 +100,17 @@ h3 {
     display: none;
     font-size: .9rem;
     margin-left: .5em;
+}
+
+.show-more {
+    @include respond(tab-port) {
+        display: inline;
+    }
+}
+
+.show-less {
+    @include respond(tab-port) {
+        display: none;
+    }
 }
 

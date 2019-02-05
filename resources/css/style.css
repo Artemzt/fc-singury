@@ -1,3 +1,19 @@
+/*
+0 -600px        Phone
+600 - 900px     Tablet portrait
+900 - 1200px    Tablet landscape
+{1200 - 1800px} our normal styles
+1800px +        Big desktop
+
+
+breakpoint arg choices:
+- phone
+- tab-port
+- tab-land
+- big desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+*/
 *,
 *::after,
 *::before {
@@ -10,13 +26,28 @@ html {
   box-sizing: inherit;
   text-rendering: optimizeLegibility;
   overflow-x: hidden; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 62.5%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 .row {
   max-width: 1140px;
   margin: 0 auto; }
+  @media (max-width: 75em) {
+    .row {
+      padding: 0 4%; } }
 
 section {
   padding: 8rem 0; }
+  @media (max-width: 56.25em) {
+    section {
+      padding: 4rem 0; } }
 
 body {
   font-family: 'Roboto', 'Arial', sans-serif;
@@ -36,6 +67,9 @@ h1 {
   font-size: 3.5rem;
   font-weight: 300;
   letter-spacing: .1rem; }
+  @media (max-width: 37.5em) {
+    h1 {
+      font-size: 2.5rem; } }
 
 h2 {
   font-size: 3rem;
@@ -62,13 +96,13 @@ h3 {
 
 .start-text-block {
   position: absolute;
-  width: 114rem;
+  width: 100%;
   top: 80%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
   .start-text-block img {
-    width: 20rem;
+    width: 17rem;
     height: auto;
     border-radius: 5rem;
     border: 0.2rem solid #e3e622; }
@@ -97,6 +131,14 @@ h3 {
   font-size: .9rem;
   margin-left: .5em; }
 
+@media (max-width: 56.25em) {
+  .show-more {
+    display: inline; } }
+
+@media (max-width: 56.25em) {
+  .show-less {
+    display: none; } }
+
 a:link,
 a:visited {
   color: #0000c4;
@@ -117,14 +159,44 @@ a:active {
 .btn:active {
   border-bottom: none; }
 
+.history-slider__2017 {
+  display: none; }
+
 .history-block {
   list-style: none;
   font-size: 0; }
+  @media (max-width: 56.25em) {
+    .history-block {
+      white-space: nowrap;
+      overflow-x: scroll; } }
 
 .history-item {
-  display: inline-block;
+  float: left;
   position: relative;
-  width: 20%; }
+  width: 20%;
+  text-align: center; }
+  .history-item::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .history-item__large {
+    width: 60%; }
+  .history-item .years-container {
+    position: relative; }
+  .history-item .year__photo {
+    width: 100%;
+    height: auto;
+    position: absolute; }
+    .history-item .year__photo--2017 {
+      top: 0;
+      left: 0; }
+  @media (max-width: 56.25em) {
+    .history-item {
+      min-width: 25rem; } }
+  .history-item__custom--left {
+    text-align: left; }
+  .history-item__custom--right {
+    text-align: right; }
   .history-item__heading {
     font-size: 2.3rem;
     font-weight: 300;
@@ -156,25 +228,24 @@ a:active {
         background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
   .history-item__img {
     display: inline-block;
-    width: auto;
-    height: 25%;
-    margin: 5rem 3rem; }
-    .history-item__img--left {
-      margin-left: 0; }
-    .history-item__img--right {
-      margin-right: 0; }
+    width: 60%;
+    height: auto;
+    margin: 5rem 0; }
   .history-item__table-position {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -100%);
     font-size: 7rem;
     font-weight: 600;
-    transform: translate(-55%, -90%);
     transition: all .8s;
     background-image: linear-gradient(to right, #0C5B93, #44B6D4);
     -webkit-background-clip: text;
     color: transparent;
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+    @media (max-width: 75em) {
+      .history-item__table-position {
+        font-size: 5rem; } }
     .history-item__table-position:hover {
       transform: scale(1);
       background-image: linear-gradient(to right, #fff, #f4f4f4);
@@ -228,40 +299,46 @@ a:active {
 
 .player-section {
   font-size: 0; }
-  .player-section li {
+  @media (max-width: 56.25em) {
+    .player-section {
+      display: none; } }
+  .player-section__card {
+    position: relative;
+    height: .1rem;
     display: inline-block;
     width: 25%;
     padding: 0 .6rem;
     margin-top: 1.2rem; }
-
-.card {
-  position: relative;
-  width: auto;
-  height: .1rem; }
-  .card:hover .player-front {
-    transform: rotateY(180deg); }
-  .card:hover .player-back {
-    transform: rotateY(360deg); }
-  .card .player-face {
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    backface-visibility: hidden; }
-    .card .player-face img {
+    @media (max-width: 56.25em) {
+      .player-section__card {
+        width: 25%; } }
+    @media (max-width: 37.5em) {
+      .player-section__card {
+        width: 50%; } }
+    .player-section__card:hover .player-front {
+      transform: rotateY(180deg); }
+    .player-section__card:hover .player-back {
+      transform: rotateY(360deg); }
+    .player-section__card .player-face {
+      width: 100%;
+      height: 100%;
+      transition: transform 1s;
+      backface-visibility: hidden; }
+      .player-section__card .player-face img {
+        width: 100%;
+        height: auto; }
+    .player-section__card .player-back {
+      transform: rotateY(180deg);
+      position: relative;
       width: 100%;
       height: auto; }
-  .card .player-back {
-    transform: rotateY(180deg);
-    position: relative;
-    width: 100%;
-    height: auto; }
-    .card .player-back figure {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.585), rgba(0, 0, 0, 0.585)), url(../img/players/ivanov-back.png);
-      background-size: cover;
-      background-position: center;
-      /*hack to display background image above*/ }
-      .card .player-back figure img {
-        visibility: hidden; }
+      .player-section__card .player-back figure {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.585), rgba(0, 0, 0, 0.585)), url(../img/players/ivanov-back.png);
+        background-size: cover;
+        background-position: center;
+        /*hack to display background image above*/ }
+        .player-section__card .player-back figure img {
+          visibility: hidden; }
 
 header {
   background-attachment: fixed;
@@ -275,6 +352,9 @@ header {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 4rem; } }
   .row::after {
     content: "";
     display: table;

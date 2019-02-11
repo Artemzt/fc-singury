@@ -10,37 +10,36 @@
   }
 }
 .history-item {
-  //display: inline-block;
-  float: left;
+  display: inline-block;
 
 
   position: relative;
   width: 20%;
   text-align: center;
 
-  @include clearfix;
 
-  &__large {
-    width: 60%;
-  }
-
-  .years-container {
-    position: relative;
-  }
-
-  .year__photo {
-    width: 100%;
-    height: auto;
+  &__years-block {
     position: absolute;
+    top: 0;
+    left: -14rem;
+    right: -14rem;
+    border-bottom: 0;
 
-    &--2017 {
-      top: 0;
+    &-conteiner {
+      position: absolute;
+      top: 10rem;
+      right: 0;
       left: 0;
+
+      &--year {
+        display: inline-block;
+        width: 20%;
+        height: 5rem;
+        text-align: center;
+        position: relative;
+      }
     }
-
   }
-
-
 
 
   @include respond(tab-port) {
@@ -60,10 +59,13 @@
     font-size: 2.3rem;
     font-weight: 300;
     text-transform: uppercase;
-
     color: #fff;
     position: absolute;
     width: 75%;
+
+    @include respond(tab-land) {
+      font-size: 2rem;
+    }
 
     &--top-left {
       top: 2rem;
@@ -107,14 +109,14 @@
     }
   }
 
-
   &__img {
     display: inline-block;
     width: 60%;
     height: auto;
     margin: 5rem 0;
-  }
 
+    &--hide {opacity: 0}
+  }
 
 //TABLE POSITION TEXT
   &__table-position {position: absolute;
@@ -137,7 +139,6 @@
       background-image: linear-gradient(to right, $color-white, $color-section-background);
       text-shadow: .5rem 1rem 2rem rgba($color-black, .2 );
       font-weight: 300;
-
     }
   }
 }

@@ -21,13 +21,13 @@
   &__years-block {
     position: absolute;
     top: 0;
-    left: -14rem;
-    right: -14rem;
+    bottom: 0;
+    left: -12rem;
+    right: -16rem;
     border-bottom: 0;
 
     &-conteiner {
       position: absolute;
-      top: 10rem;
       right: 0;
       left: 0;
 
@@ -39,6 +39,18 @@
         position: relative;
       }
     }
+  }
+
+  //YEAR BUTTONS POSITIONING
+
+  .buttons__top {
+    position: absolute;
+    top: 30%;
+  }
+
+  .buttons__bottom {
+    position: absolute;
+    bottom: 15%;
   }
 
 

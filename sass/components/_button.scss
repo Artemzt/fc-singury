@@ -136,17 +136,13 @@ a:active {
     z-index: 2;
   }
 
-
-
-
-
   @media only screen and (max-width: 56.25em),
   only screen and (hover:none) {
 
       //width: 130%;
       //height: 130%;
-      width: 7rem;
-      height: 7rem;
+      width: 5rem;
+      height: 5rem;
       left: -1.3rem;
       top: -1.4rem;
       font-size: 3.3rem;
@@ -154,16 +150,14 @@ a:active {
 
       border-top:2px solid #fff;
 
-
-
     &::before{
       content:" ";
       display:block;
       position:absolute;
       top: -1.3rem;
       left: -1.3rem;
-      width: 9rem;
-      height: 9rem;
+      width: 7rem;
+      height: 7rem;
       border-radius:50%;
       border-top:2px solid #CCC8BF;
       border-bottom: 1px solid #F4F3F1;
@@ -173,9 +167,10 @@ a:active {
 
     }
 
-    &:active {
-      width: 7rem;
-      height: 7rem;
+    &:active,
+    &:hover {
+      width: 5rem;
+      height: 5rem;
       left: -1.3rem;
       top: -1.4rem;
       font-size: 3.3rem;
@@ -202,17 +197,8 @@ a:active {
     & span.animated-button:active {
       display: none;
     }
-
-
-
   }
-
 }
-
-
-
-
-
 
 //MOBILE BUTTON
 .box{

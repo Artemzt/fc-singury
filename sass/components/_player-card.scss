@@ -6,6 +6,11 @@
     display: none;
   }
 
+  & figure img{
+    box-shadow: $shadow-main;
+    border-radius: 2rem;
+  }
+
   &__card {
     position: relative;
     height: .1rem;
@@ -35,6 +40,7 @@
       transition: transform 1s;
       backface-visibility: hidden;
 
+
       & img {
         width: 100%;
         height: auto;
@@ -47,16 +53,16 @@
       width: 100%;
       height: auto;
 
-      & figure {
+     /* & figure {
         background-image: linear-gradient(rgba($color-black, 0.585), rgba($color-black, 0.585)), url(../img/players/ivanov-back.png);
         background-size: cover;
         background-position: center;
 
-        /*hack to display background image above*/
+        /*hack to display background image above
         & img {
           visibility: hidden;
         }
-      }
+      }*/
     }
   }
 }

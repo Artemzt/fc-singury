@@ -1,0 +1,54 @@
+.footer {
+    background-color: $color-black;
+    padding: 5rem 0;
+    font-size: 1.4rem;
+    color: antiquewhite;
+    border-top: 1px solid white;
+
+    @include respond(phone) {
+        padding: 2rem 0;
+    }
+
+    &-text {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        padding: 1rem 2rem;
+
+        @include respond(phone) {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        & :not(:last-child) {
+
+            @include respond(phone) {
+                margin-bottom: 3rem;
+            }
+            }
+
+        & p {
+            flex: 0 0 40%;
+            border-top: 1px solid #777;
+            padding-top: 2rem;
+        }
+
+        &__author {
+        }
+
+        &__description {
+
+            & a:link,
+            & a:visited {
+                color: $color-orange;
+            }
+
+            a:hover,
+            a:active {
+                color: $color-yellow;
+            }
+
+        }
+    }
+
+}

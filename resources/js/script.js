@@ -26,8 +26,6 @@ for(let i = 0; i < showLessButton.length; i++) {
 
 
 
-//let historySlider = document.querySelectorAll('.history-slider');
-
 let historySlider = $('.history-slider');
 let animatedButton = $('.year-link');
 

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./resources/css/style.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/queries.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gabriela&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One&amp;subset=cyrillic" rel="stylesheet">
     
 
@@ -25,10 +26,8 @@
                 <img src="./resources/img/logo.png" alt="Team logo" class="logo">
                 <div class="main-nav">
                     <ul>
-                        <li><a href="#">Команда
-                        </a></li>
-                        <li><a href="#">Стадіон</a></li>
-                        <li><a href="#">Історія</a></li>
+                        <li><a href="#players">Гравці</a></li>
+                        <li><a href="#history">Історія</a></li>
                     </ul>
                 </div>
             </div>
@@ -41,7 +40,7 @@
                     src="./resources/img/facebook-Button.jpg" alt="Facebook"></a>
         </div>
     </header>
-    <section class="section-players">
+    <section class="section-players" id="players">
         <div class="row">
             <h2>Гравці Команди</h2>
         </div>
@@ -53,12 +52,17 @@
                 <li class="player-section__card">
                     <div class="player-face player-front">
                         <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <img src="./resources/img/players/Deadpool.jpg" alt="Воротар 1">
+                            <div class="player-front--textblock">
+                                <span>#1</span>
+                                <span>Дмитро</span>
+                                <span>Гладун</span>
+                            </div>
                         </figure>
                     </div>
                     <div class="player-face player-back">
                         <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <img src="./resources/img/player-card/card-back/gladun-back.png" alt="Воротар 2">
                         </figure>
                     </div>
                 </li>
@@ -66,35 +70,16 @@
                     <div class="player-face player-front">
                         <figure>
                             <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#14</span>
+                                <span>Артем</span>
+                                <span>Соколовський</span>
+                            </div>
                         </figure>
                     </div>
                     <div class="player-face player-back">
                         <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                </li>
-                <li class="player-section__card">
-                    <div class="player-face player-front">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="player-face player-back">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                </li>
-                <li class="player-section__card">
-                    <div class="player-face player-front">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="player-face player-back">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <img src="./resources/img/player-card/card-back/sokolovskiy-back.png" alt="">
                         </figure>
                     </div>
                 </li>
@@ -107,24 +92,96 @@
                     <div class="player-face player-front">
                         <figure>
                             <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="player-face player-back">
-                        <figure>
-                            <img src="./resources/img/players/ivanov-back.png" alt="">
-                            <div class="player-back--textblock">
-                                <span>#6</span>
-                                <span>Віктор</span> 
-                                <span>Неподобний</span>  
-                                <span>12 грудня 1986</span>
+                            <div class="player-front--textblock">
+                                <span>#</span>
+                                <span>Василь</span>
+                                <span>Цал-Цалко</span>
                             </div>
                         </figure>
                     </div>
+                    <div class="player-face player-back">
+                        <figure>
+                            <img src="./resources/img/player-card/card-back/tsal_tsalko-back.png" alt="">
+                        </figure>
+                    </div>
                 </li>
                 <li class="player-section__card">
                     <div class="player-face player-front">
                         <figure>
                             <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#9</span>
+                                <span>Максим</span>
+                                <span>Іванов</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="player-face player-back">
+                        <figure>
+                            <img src="./resources/img/player-card/card-back/ivanovmax-back.png" alt="">
+                        </figure>
+                    </div>
+                </li>
+                <li class="player-section__card">
+                    <div class="player-face player-front">
+                        <figure>
+                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#8</span>
+                                <span>Євген</span>
+                                <span>Іванов</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="player-face player-back">
+                        <figure>
+                            <img src="./resources/img/player-card/card-back/ivanovzh-back.png" alt="">
+                        </figure>
+                    </div>
+                </li>
+                <li class="player-section__card">
+                    <div class="player-face player-front">
+                        <figure>
+                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#</span>
+                                <span>Олександр</span>
+                                <span>Цивінський</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="player-face player-back">
+                        <figure>
+                            <img src="./resources/img/player-card/card-back/tsyvinskyi-back.png" alt="">
+                        </figure>
+                    </div>
+                </li>
+                <li class="player-section__card">
+                    <div class="player-face player-front">
+                        <figure>
+                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#</span>
+                                <span>В'ячеслав</span>
+                                <span>Войтюк</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="player-face player-back">
+                        <figure>
+                            <img src="./resources/img/player-card/card-back/voityuk-back.png" alt="">
+                        </figure>
+                    </div>
+                </li>
+                <li class="player-section__card">
+                    <div class="player-face player-front">
+                        <figure>
+                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#</span>
+                                <span>Євген</span>
+                                <span>Литвин</span>
+                            </div>
                         </figure>
                     </div>
                     <div class="player-face player-back">
@@ -137,6 +194,11 @@
                     <div class="player-face player-front">
                         <figure>
                             <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#</span>
+                                <span>Олег</span>
+                                <span>Глухончук</span>
+                            </div>
                         </figure>
                     </div>
                     <div class="player-face player-back">
@@ -149,76 +211,212 @@
                     <div class="player-face player-front">
                         <figure>
                             <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#</span>
+                                <span>Іван</span>
+                                <span>Сливінський</span>
+                            </div>
                         </figure>
                     </div>
                     <div class="player-face player-back">
                         <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                </li>
-                <li class="player-section__card">
-                    <div class="player-face player-front">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="player-face player-back">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                </li>
-                <li class="player-section__card">
-                    <div class="player-face player-front">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="player-face player-back">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                </li>
-                <li class="player-section__card">
-                    <div class="player-face player-front">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="player-face player-back">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                </li>
-                <li class="player-section__card">
-                    <div class="player-face player-front">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="player-face player-back">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <img src="./resources/img/player-card/card-back/slivinskiy-back.png" alt="">
                         </figure>
                     </div>
                 </li>
             </ul>
             <div>
-                <h3>Півзахисники</h3>
+                <h3>Півзахисники <a class="show-more">показати</a><a class="show-less">приховати</a></h3>
+            </div>
+            <ul class="player-section">
+                <li class="player-section__card">
+                    <div class="player-face player-front">
+                        <figure>
+                            <img src="./resources/img/players/Deadpool.jpg" alt="Півзахисник 1">
+                            <div class="player-front--textblock">
+                                <span>#3</span>
+                                <span>Ігор</span>
+                                <span>Ганжала</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="player-face player-back">
+                        <figure>
+                            <img src="./resources/img/player-card/card-back/ganzhala-back.png" alt="">
+                        </figure>
+                    </div>
+                </li>
+                <li class="player-section__card">
+                    <div class="player-face player-front">
+                        <figure>
+                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#13</span>
+                                <span>Сергій</span>
+                                <span>Чайковський</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="player-face player-back">
+                        <figure>
+                            <img src="./resources/img/player-card/card-back/chaikovskiy-back.png" alt="">
+                        </figure>
+                    </div>
+                </li>
+                <li class="player-section__card">
+                    <div class="player-face player-front">
+                        <figure>
+                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#3</span>
+                                <span>Віктор</span>
+                                <span>Неподобний</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="player-face player-back">
+                        <figure>
+                            <img src="./resources/img/player-card/card-back/nepodobnyi-back.png" alt="">
+                        </figure>
+                    </div>
+                </li>
+                <li class="player-section__card">
+                    <div class="player-face player-front">
+                        <figure>
+                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#6</span>
+                                <span>Вадим</span>
+                                <span>Дев'ятак</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="player-face player-back">
+                        <figure>
+                            <img src="./resources/img/player-card/card-back/devyatak-back.png" alt="">
+                        </figure>
+                    </div>
+                </li>
+                <li class="player-section__card">
+                    <div class="player-face player-front">
+                        <figure>
+                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#6</span>
+                                <span>Олександр</span>
+                                <span>Савенко</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="player-face player-back">
+                        <figure>
+                            <img src="./resources/img/player-card/card-back/savenko-back.png" alt="">
+                        </figure>
+                    </div>
+                </li>
+                <li class="player-section__card">
+                    <div class="player-face player-front">
+                        <figure>
+                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#6</span>
+                                <span>Андрій</span>
+                                <span>Когут</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="player-face player-back">
+                        <figure>
+                            <img src="./resources/img/player-card/card-back/kohut-back.png" alt="">
+                        </figure>
+                    </div>
+                </li>
+                <li class="player-section__card">
+                    <div class="player-face player-front">
+                        <figure>
+                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#6</span>
+                                <span>Павло</span>
+                                <span>Фоміних</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="player-face player-back">
+                        <figure>
+                            <img src="./resources/img/player-card/card-back/fominykh-back.png" alt="">
+                        </figure>
+                    </div>
+                </li>
+                <li class="player-section__card">
+                    <div class="player-face player-front">
+                        <figure>
+                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#6</span>
+                                <span>Олександр</span>
+                                <span>Шибистюк</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="player-face player-back">
+                        <figure>
+                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                        </figure>
+                    </div>
+                </li>
+                <li class="player-section__card">
+                    <div class="player-face player-front">
+                        <figure>
+                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#6</span>
+                                <span>Юрій</span>
+                                <span>Іванов</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="player-face player-back">
+                        <figure>
+                            <img src="./resources/img/player-card/card-back/ivanovyu-back.png" alt="">
+                        </figure>
+                    </div>
+                </li><li class="player-section__card">
+                <div class="player-face player-front">
+                    <figure>
+                        <img src="./resources/img/players/Deadpool.jpg" alt="">
+                        <div class="player-front--textblock">
+                            <span>#7</span>
+                            <span>Євген</span>
+                            <span>Джус</span>
+                        </div>
+                    </figure>
+                </div>
+                <div class="player-face player-back">
+                    <figure>
+                        <img src="./resources/img/player-card/card-back/dzus-back.png" alt="">
+                    </figure>
+                </div>
+            </li>
+            </ul>
+            <div>
+                <h3>Нападаючі <a class="show-more">показати</a><a class="show-less">приховати</a></h3>
             </div>
             <ul class="player-section">
                 <li class="player-section__card">
                     <div class="player-face player-front">
                         <figure>
                             <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#</span>
+                                <span>В'ячеслав</span>
+                                <span>Савчук</span>
+                            </div>
                         </figure>
                     </div>
                     <div class="player-face player-back">
                         <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <img src="./resources/img/player-card/card-back/savchuk-back.png" alt="">
                         </figure>
                     </div>
                 </li>
@@ -226,11 +424,16 @@
                     <div class="player-face player-front">
                         <figure>
                             <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#</span>
+                                <span>Максим</span>
+                                <span>Мілевський</span>
+                            </div>
                         </figure>
                     </div>
                     <div class="player-face player-back">
                         <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <img src="./resources/img/player-card/card-back/milevskiy-back.png" alt="">
                         </figure>
                     </div>
                 </li>
@@ -238,124 +441,16 @@
                     <div class="player-face player-front">
                         <figure>
                             <img src="./resources/img/players/Deadpool.jpg" alt="">
+                            <div class="player-front--textblock">
+                                <span>#</span>
+                                <span>Олександр</span>
+                                <span>Пуненков</span>
+                            </div>
                         </figure>
                     </div>
                     <div class="player-face player-back">
                         <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                </li>
-                <li class="player-section__card">
-                    <div class="player-face player-front">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="player-face player-back">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                </li>
-                <li class="player-section__card">
-                    <div class="player-face player-front">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="player-face player-back">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                </li>
-                <li class="player-section__card">
-                    <div class="player-face player-front">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="player-face player-back">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                </li>
-                <li class="player-section__card">
-                    <div class="player-face player-front">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="player-face player-back">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                </li>
-                <li class="player-section__card">
-                    <div class="player-face player-front">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="player-face player-back">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                </li>
-            </ul>
-            <div>
-                <h3>Нападаючі</h3>
-            </div>
-            <ul class="player-section">
-                <li class="player-section__card">
-                    <div class="player-face player-front">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="player-face player-back">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                </li>
-                <li class="player-section__card">
-                    <div class="player-face player-front">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="player-face player-back">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                </li>
-                <li class="player-section__card">
-                    <div class="player-face player-front">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="player-face player-back">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                </li>
-                <li class="player-section__card">
-                    <div class="player-face player-front">
-                        <figure>
-                            <img src="./resources/img/players/Deadpool.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="player-face player-back">
-                        <figure>
-                            <img src="./resources/img/players/ivanov-back.png" alt="">
+                            <img src="./resources/img/player-card/card-back/punenkov-back.png" alt="">
                         </figure>
                     </div>
                 </li>
@@ -364,7 +459,7 @@
         </div>
     </section>
 
-    <section class="section-history">
+    <section class="section-history" id="history">
         <div class="history__slider-active history-slider label__container" id="2018">
                 <div class="label">
                         <label class="label__text">2018</label>
@@ -392,9 +487,12 @@
                     <img src="./resources/img/history/cup.png" alt="Constitution Cup" class="history-item__img history-item__img--right">
                 </li>
                 <li class="history-item">
-                        <h4 class="history-item__heading history-item__heading--bottom history-item__heading--bottom-left">
+                        <h4 class="history-item__heading history-item__heading--bottom history-item__heading--top-left">
                                 <span class="history-item__heading-span history-item__heading-span--blue">Кращий<br>гравець</span>
                         </h4>
+                    <div class="history-item__heading--bottom-center">
+                        <h5>Максим Іванов</h5>
+                    </div>
                     <img src="./resources/img/history/best-player--2018.png" alt="MVP" class="history-item__img history-item__img--right">
                 </li>
             </ul>
@@ -415,27 +513,36 @@
                 </li>
                 <li class="history-item history-item__custom--left">
                     <h4 class="history-item__heading history-item__heading--top-left">
-                        <span class="history-item__heading-span history-item__heading-span--yellow">Кубок<br>Троянова</span>
+                        <span class="history-item__heading-span history-item__heading-span--yellow">Повернення<br>додому</span>
                     </h4>
-                    <img src="./resources/img/history/cup.png" alt="Troyanov Cup" class="history-item__img history-item__img--left">
+                    <div class="history-item__heading--center">
+                        <h5>Введення</h5><h5>домашнього</h5><h5>стадіону</h5>
+                    </div>
+                    <img src="./resources/img/history/cup.png" alt="Troyanov Cup" class="history-item__img history-item__img--left hide__block">
                 </li>
 
                 <li class="history-item history-item__custom--right">
                     <h4 class="history-item__heading  history-item__heading--top history-item__heading--top-right">
-                        <span class="history-item__heading-span history-item__heading-span--yellow">Кубок Дня<br> Конституції</span>
+                        <span class="history-item__heading-span history-item__heading-span--yellow">Новий<br>курс</span>
                     </h4>
-                    <img src="./resources/img/history/cup.png" alt="Constitution Cup" class="history-item__img history-item__img--right">
+                    <div class="history-item__heading--center">
+                        <h5>Орієнтація</h5><h5>на місцевих</h5><h5>гравців</h5>
+                    </div>
+                    <img src="./resources/img/history/cup.png" alt="Constitution Cup" class="history-item__img history-item__img--right hide__block">
                 </li>
                 <li class="history-item">
-                    <h4 class="history-item__heading history-item__heading--bottom history-item__heading--bottom-left">
+                    <h4 class="history-item__heading history-item__heading--bottom history-item__heading--top-left">
                         <span class="history-item__heading-span history-item__heading-span--blue">Кращий<br>гравець</span>
                     </h4>
+                    <div class="history-item__heading--bottom-center">
+                        <h5>Вадим Дев'ятак</h5>
+                    </div>
                     <img src="./resources/img/history/best-player--2018.png" alt="MVP" class="history-item__img history-item__img--right">
                 </li>
             </ul>
         </div>
 
-        <div class="history__slider-inactive history-slider label__container" id="2016">
+        <div class="history__slider-inactive history-slider label__container" id="2016" >
             <div class="label">
                 <label class="label__text">2016</label>
             </div>
@@ -450,21 +557,30 @@
                 </li>
                 <li class="history-item history-item__custom--left">
                     <h4 class="history-item__heading history-item__heading--top-left">
-                        <span class="history-item__heading-span history-item__heading-span--yellow">Кубок<br>Троянова</span>
+                        <span class="history-item__heading-span history-item__heading-span--yellow">Новий<br>виклик</span>
                     </h4>
-                    <img src="./resources/img/history/cup.png" alt="Troyanov Cup" class="history-item__img history-item__img--left">
+                    <div class="history-item__heading--center">
+                        <h5>Прийнято</h5><h5>участь</h5><h5>у зимовому</h5><h5>турнірі</h5><h5>"Сніжинка"</h5>
+                    </div>
+                    <img src="./resources/img/history/cup.png" alt="Troyanov Cup" class="history-item__img history-item__img--left hide__block">
                 </li>
 
                 <li class="history-item history-item__custom--right">
                     <h4 class="history-item__heading  history-item__heading--top history-item__heading--top-right">
-                        <span class="history-item__heading-span history-item__heading-span--yellow">Кубок Дня<br> Конституції</span>
+                        <span class="history-item__heading-span history-item__heading-span--yellow">Найбільша<br> Перемога</span>
                     </h4>
-                    <img src="./resources/img/history/cup.png" alt="Constitution Cup" class="history-item__img history-item__img--right">
+                    <div class="history-item__heading--center">
+                        <h5>Сінгури</h5><h5>-</h5><h5>"Перемога" Садки</h5><h5>12-2</h5>
+                    </div>
+                    <img src="./resources/img/history/cup.png" alt="Constitution Cup" class="history-item__img history-item__img--right hide__block">
                 </li>
                 <li class="history-item">
-                    <h4 class="history-item__heading history-item__heading--bottom history-item__heading--bottom-left">
+                    <h4 class="history-item__heading history-item__heading--bottom history-item__heading--top-left">
                         <span class="history-item__heading-span history-item__heading-span--blue">Кращий<br>гравець</span>
                     </h4>
+                    <div class="history-item__heading--bottom-center">
+                        <h5>Роман Інарт</h5>
+                    </div>
                     <img src="./resources/img/history/best-player--2018.png" alt="MVP" class="history-item__img history-item__img--right">
                 </li>
             </ul>
@@ -485,21 +601,30 @@
                 </li>
                 <li class="history-item history-item__custom--left">
                     <h4 class="history-item__heading history-item__heading--top-left">
-                        <span class="history-item__heading-span history-item__heading-span--yellow">Кубок<br>Троянова</span>
+                        <span class="history-item__heading-span history-item__heading-span--yellow">Історичне<br>досягнення</span>
                     </h4>
-                    <img src="./resources/img/history/cup.png" alt="Troyanov Cup" class="history-item__img history-item__img--left">
+                    <div class="history-item__heading--center">
+                        <h5>Найвище</h5><h5>місце</h5><h5>у першості</h5>
+                    </div>
+                    <img src="./resources/img/history/cup.png" alt="Troyanov Cup" class="history-item__img history-item__img--left hide__block">
                 </li>
 
                 <li class="history-item history-item__custom--right">
                     <h4 class="history-item__heading  history-item__heading--top history-item__heading--top-right">
-                        <span class="history-item__heading-span history-item__heading-span--yellow">Кубок Дня<br> Конституції</span>
+                        <span class="history-item__heading-span history-item__heading-span--yellow">Оновлення</span>
                     </h4>
-                    <img src="./resources/img/history/cup.png" alt="Constitution Cup" class="history-item__img history-item__img--right">
+                    <div class="history-item__heading--center">
+                        <h5>Закуплено</h5><h5>нову</h5><h5>форму</h5>
+                    </div>
+                    <img src="./resources/img/history/cup.png" alt="Constitution Cup" class="history-item__img history-item__img--right hide__block">
                 </li>
                 <li class="history-item">
-                    <h4 class="history-item__heading history-item__heading--bottom history-item__heading--bottom-left">
+                    <h4 class="history-item__heading history-item__heading--bottom history-item__heading--top-left">
                         <span class="history-item__heading-span history-item__heading-span--blue">Кращий<br>гравець</span>
                     </h4>
+                    <div class="history-item__heading--bottom-center">
+                        <h5>Олександр Свєста</h5>
+                    </div>
                     <img src="./resources/img/history/best-player--2018.png" alt="MVP" class="history-item__img history-item__img--right">
                 </li>
             </ul>
@@ -520,21 +645,30 @@
                 </li>
                 <li class="history-item history-item__custom--left">
                     <h4 class="history-item__heading history-item__heading--top-left">
-                        <span class="history-item__heading-span history-item__heading-span--yellow">Кубок<br>Троянова</span>
+                        <span class="history-item__heading-span history-item__heading-span--yellow">Зміна<br>назви</span>
                     </h4>
-                    <img src="./resources/img/history/cup.png" alt="Troyanov Cup" class="history-item__img history-item__img--left">
+                    <div class="history-item__heading--center">
+                        <h5>ФК"Сінгури"</h5><h5>став</h5><h5>"Атлет-2"</h5>
+                    </div>
+                    <img src="./resources/img/history/cup.png" alt="Troyanov Cup" class="history-item__img history-item__img--left hide__block">
                 </li>
 
                 <li class="history-item history-item__custom--right">
                     <h4 class="history-item__heading  history-item__heading--top history-item__heading--top-right">
-                        <span class="history-item__heading-span history-item__heading-span--yellow">Кубок Дня<br> Конституції</span>
+                        <span class="history-item__heading-span history-item__heading-span--yellow">Найдовша<br> серія</span>
                     </h4>
-                    <img src="./resources/img/history/cup.png" alt="Constitution Cup" class="history-item__img history-item__img--right">
+                    <div class="history-item__heading--center">
+                        <h5>5 матчів</h5><h5>без</h5><h5>поразок</h5>
+                    </div>
+                    <img src="./resources/img/history/cup.png" alt="Constitution Cup" class="history-item__img history-item__img--right hide__block">
                 </li>
                 <li class="history-item">
-                    <h4 class="history-item__heading history-item__heading--bottom history-item__heading--bottom-left">
+                    <h4 class="history-item__heading history-item__heading--bottom history-item__heading--top-left">
                         <span class="history-item__heading-span history-item__heading-span--blue">Кращий<br>гравець</span>
                     </h4>
+                    <div class="history-item__heading--bottom-center">
+                        <h5>Рябчук Олександр</h5>
+                    </div>
                     <img src="./resources/img/history/best-player--2018.png" alt="MVP" class="history-item__img history-item__img--right">
                 </li>
             </ul>
@@ -555,21 +689,30 @@
                 </li>
                 <li class="history-item history-item__custom--left">
                     <h4 class="history-item__heading history-item__heading--top-left">
-                        <span class="history-item__heading-span history-item__heading-span--yellow">Кубок<br>Троянова</span>
+                        <span class="history-item__heading-span history-item__heading-span--yellow">Перший<br>домашній матч</span>
                     </h4>
-                    <img src="./resources/img/history/cup.png" alt="Troyanov Cup" class="history-item__img history-item__img--left">
+                    <div class="history-item__heading--center">
+                        <h5>Сінгури</h5><h5>-</h5><h5>Стандарт (Піски)</h5> <h5>6:2</h5>
+                    </div>
+                    <img src="./resources/img/history/cup.png" alt="Troyanov Cup" class="history-item__img history-item__img--left hide__block">
                 </li>
 
                 <li class="history-item history-item__custom--right">
                     <h4 class="history-item__heading  history-item__heading--top history-item__heading--top-right">
-                        <span class="history-item__heading-span history-item__heading-span--yellow">Кубок Дня<br> Конституції</span>
+                        <span class="history-item__heading-span history-item__heading-span--yellow">Найбільше голів<br>за один сезон</span>
                     </h4>
-                    <img src="./resources/img/history/cup.png" alt="Constitution Cup" class="history-item__img history-item__img--right">
+                    <div class="history-item__heading--center">
+                        <h5>Ярослав</h5><h5>Ясинський</h5><h5>12</h5>
+                    </div>
+                    <img src="./resources/img/history/cup.png" alt="Constitution Cup" class="history-item__img history-item__img--right hide__block">
                 </li>
                 <li class="history-item">
-                    <h4 class="history-item__heading history-item__heading--bottom history-item__heading--bottom-left">
+                    <h4 class="history-item__heading history-item__heading--top-left history-item__heading--top-left">
                         <span class="history-item__heading-span history-item__heading-span--blue">Кращий<br>гравець</span>
                     </h4>
+                    <div class="history-item__heading--bottom-center">
+                        <h5>Ясинський Ярослав</h5>
+                    </div>
                     <img src="./resources/img/history/best-player--2018.png" alt="MVP" class="history-item__img history-item__img--right">
                 </li>
             </ul>
@@ -620,65 +763,42 @@
                         <span class="history-item__heading-span history-item__heading-span--blue">Позиція<br>у першості</span>
                     </h4>
                     <img src="./resources/img/kit-back.png" alt="Table position" class="history-item__img">
-                    <div class="history-item__table-position">13</div>
+                    <div class="history-item__table-position">19</div>
 
                 </li>
                 <li class="history-item history-item__custom--left">
                     <h4 class="history-item__heading history-item__heading--top-left">
-                        <span class="history-item__heading-span history-item__heading-span--yellow">Кубок<br>Троянова</span>
+                        <span class="history-item__heading-span history-item__heading-span--yellow">Перша<br>перемога</span>
                     </h4>
-                    <img src="./resources/img/history/cup.png" alt="Troyanov Cup" class="history-item__img history-item__img--left">
+                    <div class="history-item__heading--center">
+                        <h5>Сінгури</h5><h5>-</h5><h5>Вертокиївка</h5> <h5>3:0</h5>
+                    </div>
+
+
+                    <img src="./resources/img/history/cup.png" alt="Troyanov Cup" class="history-item__img history-item__img--left hide__block">
                 </li>
 
                 <li class="history-item history-item__custom--right">
                     <h4 class="history-item__heading  history-item__heading--top history-item__heading--top-right">
-                        <span class="history-item__heading-span history-item__heading-span--yellow">Кубок Дня<br> Конституції</span>
+                        <span class="history-item__heading-span history-item__heading-span--yellow">Найбільша<br> Поразка</span>
                     </h4>
-                    <img src="./resources/img/history/cup.png" alt="Constitution Cup" class="history-item__img history-item__img--right">
+                    <div class="history-item__heading--center">
+                        <h5>"Метеор" (Василівка)</h5><h5>-</h5><h5>Сінгури</h5> <h5>11:0</h5>
+                    </div>
+                    <img src="./resources/img/history/cup.png" alt="Constitution Cup" class="history-item__img history-item__img--right hide__block">
                 </li>
                 <li class="history-item">
-                    <h4 class="history-item__heading history-item__heading--bottom history-item__heading--bottom-left">
+                    <h4 class="history-item__heading history-item__heading--bottom history-item__heading--top-left">
                         <span class="history-item__heading-span history-item__heading-span--blue">Кращий<br>гравець</span>
                     </h4>
+                    <div class="history-item__heading--bottom-center">
+                        <h5>Сергій Михалюк</h5>
+                    </div>
                     <img src="./resources/img/history/best-player--2018.png" alt="MVP" class="history-item__img history-item__img--right">
                 </li>
             </ul>
         </div>
 
-        <div class="history__slider-inactive history-slider label__container" id="2010">
-            <div class="label">
-                <label class="label__text">2010</label>
-            </div>
-            <ul class="history-block">
-                <li class="history-item">
-                    <h4 class="history-item__heading history-item__heading--bottom-right">
-                        <span class="history-item__heading-span history-item__heading-span--blue">Позиція<br>у першості</span>
-                    </h4>
-                    <img src="./resources/img/kit-back.png" alt="Table position" class="history-item__img">
-                    <div class="history-item__table-position">13</div>
-
-                </li>
-                <li class="history-item history-item__custom--left">
-                    <h4 class="history-item__heading history-item__heading--top-left">
-                        <span class="history-item__heading-span history-item__heading-span--yellow">Кубок<br>Троянова</span>
-                    </h4>
-                    <img src="./resources/img/history/cup.png" alt="Troyanov Cup" class="history-item__img history-item__img--left">
-                </li>
-
-                <li class="history-item history-item__custom--right">
-                    <h4 class="history-item__heading  history-item__heading--top history-item__heading--top-right">
-                        <span class="history-item__heading-span history-item__heading-span--yellow">Кубок Дня<br> Конституції</span>
-                    </h4>
-                    <img src="./resources/img/history/cup.png" alt="Constitution Cup" class="history-item__img history-item__img--right">
-                </li>
-                <li class="history-item">
-                    <h4 class="history-item__heading history-item__heading--bottom history-item__heading--bottom-left">
-                        <span class="history-item__heading-span history-item__heading-span--blue">Кращий<br>гравець</span>
-                    </h4>
-                    <img src="./resources/img/history/best-player--2018.png" alt="MVP" class="history-item__img history-item__img--right">
-                </li>
-            </ul>
-        </div>
 
         <div class="years-block">
                 <ul class="years-block-conteiner">
@@ -722,21 +842,17 @@
                             <span class="animated-button ">&nbsp;</span>
                             <span class="animated-button__text">2011</span></a>
                     </li>
-                    <li class="years-block-conteiner--year year__photo--2017">
-                        <a href="#2010" class="year-link animated-button green">
-                            <span class="animated-button ">&nbsp;</span>
-                            <span class="animated-button__text">2010</span></a>
-                    </li>
                 </ul>
             </div>
 
-
-
-
-
-
-
     </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p class="footer-text__author">Сайт розроблено Соколовським Артемом за допомоги Янович Ірини та Шибистюка Олександра в 2019-му році. Фотограф Катерина Сердега.</p>
+            <p class="footer-text__description">Cайт-візитівка команди ФК "Сінгури". Створено в процесі вивчення HTML та CSS за матеріалами та ідеями курсу Jonas Schmedtmann: <a href="https://www.udemy.com/advanced-css-and-sass/" target="_blank">Advanced CSS and Sass: Flexbox, Grid, Animations and More!</a></p>
+        </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 

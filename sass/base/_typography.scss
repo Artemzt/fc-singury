@@ -11,7 +11,8 @@ body {
 /* ----- HEADINGS ----- */
 h1,
 h2,
-h3 {
+h3,
+h5{
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -27,6 +28,10 @@ h1 {
 
     @include respond(phone) {
         font-size: 2.5rem;
+    }
+
+    @include respond(small-phone) {
+        font-size: 2rem;
     }
 }
 
@@ -74,6 +79,32 @@ h4 {
 
 }
 
+h5 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: $color-white;
+    font-family: 'Rubik Mono One', sans-serif;
+    text-align: center;
+    line-height: 2.5rem;
+    box-shadow: $shadow-secondary;
+
+    @include respond(tab-port) {
+        font-size: 2rem;
+        line-height: 2rem;
+        white-space: normal;
+    }
+
+    @include respond(phone) {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    @include respond(small-phone) {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+}
+
 
 .start-text-block {
     position: absolute;
@@ -110,6 +141,22 @@ h4 {
             line-height: 4rem;
         }
     }
+}
+
+.player-front--textblock {
+
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: $color-white;
+    font-family: 'Gabriela', serif;
+    text-align: center;
+
+    @include respond(tab-port) {font-size: 2rem;}
+
+    @include respond(phone) {font-size: 2.5rem;}
+
+    @include respond(small-phone) {font-size: 2rem;}
+
 }
 
 

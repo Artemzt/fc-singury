@@ -14,10 +14,14 @@
       color: $color-white;
       text-decoration: none;
       text-transform: uppercase;
-      font-size: 1.7rem;
+      font-size: 2.5rem;
       border-bottom: .2rem solid transparent;
       -webkit-transition: border-bottom 0.2s;
       transition: border-bottom 0.2s;
+
+      @include respond(small-phone) {
+        font-size: 2rem;
+      }
     }
 
     & a:hover,

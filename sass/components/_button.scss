@@ -7,12 +7,19 @@ a:visited {
   -webkit-transition: border-bottom 0.2s, color 0.2s;
   transition: border-bottom 0.2s, color 0.2s;
 }
+*/
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
 
 a:hover,
 a:active {
-  color: $color-yellow;
+  cursor: pointer;
 }
-*/
+
+
 .btn:link,
 .btn:visited {
   border-bottom: none;

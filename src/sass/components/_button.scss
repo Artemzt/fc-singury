@@ -35,7 +35,7 @@ a.show-more:active{
   transform: rotate(-360deg);
 }
 
-//DESKTOP BUTTON
+//DESKTOP BUTTON HISTORY BUTTON
 @-moz-keyframes rotate {
   0% {transform: rotate(0deg);}
   100% {transform: rotate(-360deg);}
@@ -83,7 +83,7 @@ a.show-more:active{
   box-shadow:
           0px 0px 20px 11px rgba(158, 158, 158, 0.7), 0 3px 5px 0px #B7B6B6, 0 0 0 2px #BBB7AE, inset 0 -3px 11px 7px rgba(186, 178, 165, 0.3), inset 0 3px 13px 0px rgba(246, 245, 241, 0.2);
 
-  background-image: linear-gradient( to right bottom, rgba($color-light-yellow, 0.55), rgba($color-blue-light-2, 0.55)), url("../img/logo.png");
+  background-image: linear-gradient( to right bottom, rgba($color-light-yellow, 0.55), rgba($color-blue-light-2, 0.55)), url("../resources/img/logo.png");
   background-position: center;
   background-size: cover;
 

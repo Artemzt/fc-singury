@@ -9,7 +9,7 @@
         padding: 2rem 0;
     }
 
-    &-text {
+    &-content {
         display: flex;
         justify-content: space-around;
         align-content: center;
@@ -20,6 +20,11 @@
             text-align: center;
         }
 
+        & img {
+            border-radius: 50%;
+            width: 10rem;
+        }
+
         & :not(:last-child) {
 
             @include respond(phone) {
@@ -28,7 +33,7 @@
             }
 
         & p {
-            flex: 0 0 40%;
+            flex: 0 0 30%;
             border-top: 1px solid #777;
             padding-top: 2rem;
         }

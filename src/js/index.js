@@ -1,4 +1,4 @@
-
+import '../sass/main.scss'
 
 var showMoreButton = document.querySelectorAll('.show-more');
 var showLessButton = document.querySelectorAll('.show-less');

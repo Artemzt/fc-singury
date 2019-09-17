@@ -172,7 +172,7 @@
 
 //SLIDING
 
-.history__slider-active {
+.active {
   display: block;
 //  animation: scaleOut 0.6s ease-in-out;
   animation: zoomIn 1s;
@@ -181,7 +181,7 @@
 
 }
 
-.history__slider-inactive {
+.inactive {
 
   display: none;
 }

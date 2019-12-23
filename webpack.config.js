@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: ['@babel/polyfill', 
@@ -19,7 +20,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: {
+                use: {  
                     loader: "babel-loader"
                 }
 
@@ -64,7 +65,7 @@ module.exports = {
 
               {
                 // Now we apply rule for images
-                test: /\.(png|jpe?g|gif|svg)$/,
+                test: /\.(png|jpe?g|gif|svg)$/i,
                 use: [
                        {
                          // Using file-loader for these files
@@ -95,6 +96,10 @@ module.exports = {
             // all options are optional
             //path: path.resolve(__dirname, 'dist'),
             filename: './css/style.css',
-        })
+        }),
+
+        new CopyWebpackPlugin([
+            {from:'src/resources/img/',to:'resources/img/'}
+        ])
     ],
 };

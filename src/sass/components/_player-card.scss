@@ -27,11 +27,56 @@
       width: 50%;
     }
 
-    &:hover .player-front {
-      transform: rotateY(180deg);
-    }
-    &:hover .player-back {
-      transform: rotateY(360deg);
+    ///&:hover .player-front {
+    //  transform: rotateY(180deg);
+    //}
+    //&:hover .player-back {
+    //  transform: rotateY(360deg);
+    //}
+
+    &--feature{
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      top: -3%;
+      left: 8%;
+      right: 8%;
+      font-size: 2rem;
+      color: transparent;
+
+      &-overall{
+        display: inline-block;
+        width: 1.5rem;
+        height: 2.5rem;
+        border-radius: .2rem;
+        margin-right: .5rem;
+        line-height: 2.5rem;
+        font-size: 1.7rem;
+        text-align: center;
+        color: white;
+        font-weight: 700;
+      }
+
+      &-yellow{
+        background-color: $color-yellow;
+      }
+
+      &-red{
+        background-color: red;
+      }
+
+      &-assist{
+        background-image: url(../resources/img/player-card/boot.png);
+        background-size: cover;
+        width: 2.7rem;
+        height: 2.7rem;
+      }
+
+      &-goal{
+        background-image: url(../resources/img/player-card/goal.png);
+        background-size: cover;
+        width: 2.5rem;
+      }
     }
 
     .player-front {

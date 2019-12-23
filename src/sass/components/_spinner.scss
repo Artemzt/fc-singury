@@ -1,0 +1,28 @@
+#spinner{
+  text-align: center;
+  margin: 2em 0;
+}
+
+.dot-loader{
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #03A9F4;
+  position: relative;
+  -webkit-animation: 1.2s scaleDown ease-in-out infinite ;
+  animation: 1.2s scaleDown ease-in-out infinite ;
+
+  &:nth-child(2){
+    margin: 0 15px;
+    -webkit-animation: 1.2s scaleDown ease-in-out infinite .15555s;
+    animation: 1.2s scaleDown ease-in-out infinite .15555s;
+  }
+
+  &:nth-child(3){
+    -webkit-animation: 1.2s scaleDown ease-in-out infinite .300000s;
+    animation: 1.2s scaleDown ease-in-out infinite .300000s;
+  }
+}
+
+

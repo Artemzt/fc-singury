@@ -1,59 +1,65 @@
 import {elements, elementStrings} from './elements';
 
-let historySlider = document.querySelectorAll(`.${elementStrings.historySlider}`);
-
 export const renderHistoryItem = (history) => {
     const markup = `
-    <div class="history__slider history-slider label__container" id="2018">
+    <div class="history__slider history-slider label__container ${history.year === 2018 ? 'active' : 'inactive'}" id="${history.year}">
                 <div class="label">
-                        <label class="label__text">2018</label>
+                        <label class="label__text">${history.year}</label>
                 </div>
             <ul class="history-block">
                 <li class="history-item">
                         <h4 class="history-item__heading history-item__heading--bottom-right">
                                 <span class="history-item__heading-span history-item__heading-span--blue">Позиція<br>у першості</span>
                         </h4>
-                        <img src="./resources/img/kit-back.png" alt="Table position" class="history-item__img">
-                    <div class="history-item__table-position">13</div>
+                        <img src="./resources/img/history/kit-back.png" alt="Table position" class="history-item__img">
+                    <div class="history-item__table-position">${history.position}</div>
                     
                 </li>
                 <li class="history-item history-item__custom--left">
                         <h4 class="history-item__heading history-item__heading--top-left">
-                                <span class="history-item__heading-span history-item__heading-span--yellow">Кубок<br>Троянова</span>
+                                <span class="history-item__heading-span history-item__heading-span--yellow">${history.cup.name[0] ? history.cup.name[0] : history.event.name[0]}</span>
                         </h4>
-                    <img src="./resources/img/history/cup.png" alt="Troyanov Cup" class="history-item__img history-item__img--left">
+                        <div class="history-item__heading--center">
+                            <h5>${!history.event.description[0] ? '' : history.event.description[0]}</h5>
+                        </div>
+                    <img src="./resources/img/teams/${history.event.img[0] ? history.event.img[0] : history.cup.img[0]}" class="history-item__img history-item__img--left ${history.event.img[0] ? 'hide__block' : ''}">
                 </li>
-
                 <li class="history-item history-item__custom--right">
                         <h4 class="history-item__heading  history-item__heading--top history-item__heading--top-right">
-                                <span class="history-item__heading-span history-item__heading-span--yellow">Кубок Дня<br> Конституції</span>
+                                <span class="history-item__heading-span history-item__heading-span--yellow">${history.cup.name[1] ? history.cup.name[1] : history.event.name[1]}</span>
                         </h4>
-                    <img src="./resources/img/history/cup.png" alt="Constitution Cup" class="history-item__img history-item__img--right">
+                        <div class="history-item__heading--center">
+                            <h5>${!history.event.description[1] ? '' : history.event.description[1]}</h5>
+                        </div>
+                    <img src="./resources/img/teams/${history.event.img[1] ? history.event.img[1] : history.cup.img[1]}" class="history-item__img history-item__img--right ${history.event.img[1] ? 'hide__block' : ''}">
                 </li>
                 <li class="history-item">
                         <h4 class="history-item__heading history-item__heading--bottom history-item__heading--top-left">
                                 <span class="history-item__heading-span history-item__heading-span--blue">Кращий<br>гравець</span>
                         </h4>
                     <div class="history-item__heading--bottom-center">
-                        <h5>Максим Іванов</h5>
+                        <h5>${history.mvp}</h5>
                     </div>
-                    <img src="./resources/img/history/best-player--2018.png" alt="MVP" class="history-item__img history-item__img--right">
+                    <img src="./resources/img/teams/${history.mvpPhoto}" alt="MVP" class="history-item__img history-item__img--right">
                 </li>
             </ul>
         </div>
     `;
 
-    elements.recipe.insertAdjacentHTML('beforeend', markup);
+    elements.historySection.insertAdjacentHTML('afterbegin', markup);
 };
 
-export const displayFirstItem = () => {
-    for(let i = 0; i < historySlider.length; i++) {
-        if(i === 0) {
-            historySlider[i].classList.add('active');
-        }
-        historySlider[i].classList.add('inactive');
-    }
+export const renderHistoryControls = (history) => {
+    const markup = `
+    <li class="years-block-conteiner--year year__photo--2017">
+        <a href="#${history.year}" class="year-link years-block__button">
+            <p class="history-button__text">${history.year}</p>
+         </a>
+    </li>
+`;
+    elements.historyYearsBlock.insertAdjacentHTML('afterbegin', markup);
 };
+
 
 export const showHistoryItem = () => {
     let animatedButton = document.querySelectorAll(`.${elementStrings.animatedButton}`);
@@ -75,8 +81,7 @@ export const showHistoryItem = () => {
             historySlider[i].classList.add('active');
 
         })
-
     }
-}
+};
 
 

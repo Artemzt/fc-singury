@@ -29,7 +29,7 @@
     <header>
         <nav>
             <div class="row">
-                <img src="./resources/img/logo.png" alt="Team logo" class="logo">
+                <img src="./resources/img/logo.jpg" alt="Team logo" class="logo">
                 <div class="main-nav">
                     <ul>
                         <li><a href="#players">Гравці</a></li>
@@ -48,14 +48,14 @@
     </header>
     <section class="section-players" id="players">
         <div class="row">
-            <h2>Гравці Команди</h2>
+            <h2 class="section-players__heading">Гравці Команди</h2>
         </div>
         <div class="row">
             <div>
                 <h3>Воротарі <a class="show-more">показати</a><a class="show-less">приховати</a></h3>
             </div>
             <ul class="player-section player-section__keeper">
-                <li class="player-section__card">
+                <!--<li class="player-section__card">
                     <div class="player-face player-front">
                         <figure>
                             <img src="./resources/img/players/Deadpool.jpg" alt="Воротар 1">
@@ -88,13 +88,13 @@
                             <img src="./resources/img/player-card/card-back/sokolovskiy-back.png" alt="">
                         </figure>
                     </div>
-                </li>
+                </li>-->
             </ul>
             <div>
                 <h3>Захисники<a class="show-more">показати</a><a class="show-less">приховати</a></h3>
             </div>
             <ul class="player-section player-section__def">
-                <li class="player-section__card">
+                <!--<li class="player-section__card">
                     <div class="player-face player-front">
                         <figure>
                             <img src="./resources/img/players/Deadpool.jpg" alt="">
@@ -200,6 +200,12 @@
                     <div class="player-face player-front">
                         <figure>
                             <img src="./resources/img/player-card/card-default/card-default-front.png" alt="">
+                            <div class="player-section__card--feature">
+                                <span class="player-section__card--feature-yellow player-section__card--feature-overall">1</span>
+                                <span class="player-section__card--feature-red player-section__card--feature-overall">1</span>
+                                <span class="player-section__card--feature-goal player-section__card--feature-overall">1</span>
+                                <span class="player-section__card--feature-assist player-section__card--feature-overall">1</span>
+                            </div>
                             <div class="player-front--textblock">
                                 <span>#</span>
                                 <span>Олег</span>
@@ -229,13 +235,13 @@
                             <img src="./resources/img/player-card/card-back/slivinskiy-back.png" alt="">
                         </figure>
                     </div>
-                </li>
+                </li>-->
             </ul>
             <div>
                 <h3>Півзахисники <a class="show-more">показати</a><a class="show-less">приховати</a></h3>
             </div>
             <ul class="player-section player-section__mid">
-                <li class="player-section__card">
+                <!--<li class="player-section__card">
                     <div class="player-face player-front">
                         <figure>
                             <img src="./resources/img/players/Deadpool.jpg" alt="Півзахисник 1">
@@ -403,13 +409,13 @@
                         <img src="./resources/img/player-card/card-back/dzus-back.png" alt="">
                     </figure>
                 </div>
-            </li>
+            </li>-->
             </ul>
             <div>
                 <h3>Нападаючі <a class="show-more">показати</a><a class="show-less">приховати</a></h3>
             </div>
             <ul class="player-section player-section__scorer">
-                <li class="player-section__card">
+                <!--<li class="player-section__card">
                     <div class="player-face player-front">
                         <figure>
                             <img src="./resources/img/players/Deadpool.jpg" alt="">
@@ -459,14 +465,14 @@
                             <img src="./resources/img/player-card/card-back/punenkov-back.png" alt="">
                         </figure>
                     </div>
-                </li>
+                </li>-->
             </ul>
 
         </div>
     </section>
 
     <section class="section-history" id="history">
-        <div class="history__slider active history-slider label__container" id="2018">
+       <!-- <div class="history__slider active history-slider label__container" id="2018">
                 <div class="label">
                         <label class="label__text">2018</label>
                 </div>
@@ -499,7 +505,7 @@
                     <div class="history-item__heading--bottom-center">
                         <h5>Максим Іванов</h5>
                     </div>
-                    <img src="./resources/img/history/best-player--2018.png" alt="MVP" class="history-item__img history-item__img--right">
+                    <img src="./resources/img/history/best-player--2018.png" alt="MVP" class="history-item__img history`-item__img--right">
                 </li>
             </ul>
         </div>
@@ -804,11 +810,11 @@
                 </li>
             </ul>
         </div>
-
+--->
 
         <div class="years-block">
-                <ul class="years-block-conteiner">
-                    <li class="years-block-conteiner--year year__photo--2017">
+                <ul class="years-block-conteiner" id="years-list">
+                    <!--<li class="years-block-conteiner--year year__photo--2017">
                         <a href="#2018" class="year-link animated-button green">
                             <span class="animated-button">&nbsp;</span>
                             <span class="animated-button__text">2018</span></a>
@@ -847,7 +853,7 @@
                         <a href="#2011" class="year-link animated-button green">
                             <span class="animated-button ">&nbsp;</span>
                             <span class="animated-button__text">2011</span></a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
 
@@ -857,7 +863,7 @@
         <div class="footer-content">
             <p class="footer-content__author">Сайт розроблено Соколовським Артемом за допомоги Янович Ірини та Шибистюка Олександра в 2019-му році. Фотограф Катерина Сердега.</p>
             <div class="footer-content__logo">
-                <img src="resources/img/logo.png" alt="team logo">
+                <img src="resources/img/logo.jpg" alt="team logo">
             </div>
             <p class="footer-content__description">Cайт-візитівка команди ФК "Сінгури". Створено в процесі вивчення HTML та CSS за матеріалами та ідеями курсу Jonas Schmedtmann: <a href="https://www.udemy.com/advanced-css-and-sass/" target="_blank">Advanced CSS and Sass: Flexbox, Grid, Animations and More!</a></p>
         </div>

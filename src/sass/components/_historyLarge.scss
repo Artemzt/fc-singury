@@ -2,10 +2,6 @@
 .history-block {
   list-style: none;
   font-size: 0;
-
-  @include respond(tab-port) {
-    white-space: nowrap;
-  }
 }
 .history-item {
   display: inline-block;
@@ -44,8 +40,6 @@
     }
 
     &--top-left {
-
-      top: 2rem;
       left: 1rem;
       text-align: left;
 
@@ -54,7 +48,6 @@
     &--top-right {
       text-align: right;
       right: 1rem;
-      top: 2rem;
     }
 
     &--bottom-right {

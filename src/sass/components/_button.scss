@@ -83,7 +83,7 @@ a.show-more:active{
   box-shadow:
           0px 0px 20px 11px rgba(158, 158, 158, 0.7), 0 3px 5px 0px #B7B6B6, 0 0 0 2px #BBB7AE, inset 0 -3px 11px 7px rgba(186, 178, 165, 0.3), inset 0 3px 13px 0px rgba(246, 245, 241, 0.2);
 
-  background-image: linear-gradient( to right bottom, rgba($color-light-yellow, 0.55), rgba($color-blue-light-2, 0.55)), url("../resources/img/logo.png");
+  background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);;
   background-position: center;
   background-size: cover;
 
@@ -303,3 +303,34 @@ a.show-more:active{
   background:-moz-linear-gradient(#DAD6CB,#F1EDEA);
   box-shadow: inset 1px 0 1px 0px #D9D9D9;
 }
+
+
+// new button
+
+.years-block__button{
+  flex: 1 1 auto;
+  padding: 1.5em 4em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: $color-blue-light-1;
+  font-weight: 700;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 30px;
+  background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+
+  &:hover,
+  &:active{
+    background-position: right center; /* change the direction of the change here */
+
+  }
+}
+
+.history-button__text {
+  position: relative;
+  font-size: 1em;
+  z-index: 10;
+}
+
+

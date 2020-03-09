@@ -38,21 +38,14 @@
             padding-top: 2rem;
         }
 
-        &__author {
+        & a:link,
+        & a:visited {
+            color: $color-blue-light-2;
         }
 
-        &__description {
-
-            & a:link,
-            & a:visited {
-                color: $color-orange;
-            }
-
-            a:hover,
-            a:active {
-                color: $color-yellow;
-            }
-
+        a:hover,
+        a:active {
+            color: $color-blue-light-1;
         }
     }
 

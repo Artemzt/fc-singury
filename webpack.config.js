@@ -4,8 +4,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: ['@babel/polyfill', 
-    './src/js/index.js', ],
+    entry: ['@babel/polyfill',
+        './src/js/index.js',],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: "js/bundle.js",
@@ -20,7 +20,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: {  
+                use: {
                     loader: "babel-loader"
                 }
 
@@ -30,7 +30,7 @@ module.exports = {
                 // Apply rule for .sass, .scss or .css files
                 test: /\.(sa|sc|c)ss$/,
                 exclude: /node_modules/,
-          
+
                 // Set loaders to transform files.
                 // Loaders are applying from right to left(!)
                 // The first loader will be applied after others
@@ -41,46 +41,45 @@ module.exports = {
                         // It gets all transformed CSS and extracts it into separate
                         // single bundled file
                         loader: MiniCssExtractPlugin.loader
-                      }, 
-                       {
-                         // This loader resolves url() and @imports inside CSS
-                         loader: "css-loader",
-                       },
-                       {
-                         // Then we apply postCSS fixes like autoprefixer and minifying
-                         loader: "postcss-loader"
-                       },
-                       {
-                         // First we transform SASS to standard CSS
-                         loader: "sass-loader",
-                         options: {
-                           implementation: require("sass")
-                         }
-                       },
+                    },
+                    {
+                        // This loader resolves url() and @imports inside CSS
+                        loader: "css-loader",
+                    },
+                    {
+                        // Then we apply postCSS fixes like autoprefixer and minifying
+                        loader: "postcss-loader"
+                    },
+                    {
+                        // First we transform SASS to standard CSS
+                        loader: "sass-loader",
+                        options: {
+                            implementation: require("sass")
+                        }
+                    },
 
-                       
-                       
-                     ]
-              },
 
-              {
+                ]
+            },
+
+            {
                 // Now we apply rule for images
                 test: /\.(png|jpe?g|gif|svg)$/i,
                 use: [
-                       {
-                         // Using file-loader for these files
-                         loader: "file-loader",
-          
-                         // In options we can set different things like format
-                         // and directory to save
-                         options: {
-                           outputPath: './css/images/',
-                           publicPath: './images/'
-                         }
-                       }
-                     ]
-              }
+                    {
+                        // Using file-loader for these files
+                        loader: "file-loader",
 
+                        // In options we can set different things like format
+                        // and directory to save
+                        options: {
+                            outputPath: './css/images/',
+                            publicPath: './images/',
+                            name: '[name]-[sha1:hash:7].[ext]'
+                        }
+                    }
+                ]
+            }
         ]
     },
 
@@ -99,7 +98,7 @@ module.exports = {
         }),
 
         new CopyWebpackPlugin([
-            {from:'src/resources/img/',to:'resources/img/'}
+            {from: 'src/resources/img/', to: 'resources/img/'}
         ])
     ],
 };

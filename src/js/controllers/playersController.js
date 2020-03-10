@@ -19,7 +19,7 @@ export const controlPlayers = async () => {
         const allPlayers = await player.getAllPlayers();
         // 3) render each player on UI
         for (let player of allPlayers) {
-            playersView.renderPlayer(player);
+            playersView.renderPlayer(player, false);
         }
     }catch (e) {
         // Show error if server does not respond
@@ -29,7 +29,6 @@ export const controlPlayers = async () => {
     for (let el of elements.allPlayersSections) {
         spinnerView.clearSpinner(el);
     }
-
 };
 
 

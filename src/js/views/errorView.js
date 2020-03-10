@@ -3,7 +3,7 @@ export const hideAlert = () => {
     if (el) {
         el.parentElement.removeChild(el);
     }
-}
+};
 
 // type is 'success' or 'error'
 export const showAlert = (type, message, time = 5) => {
@@ -16,4 +16,4 @@ export const showAlert = (type, message, time = 5) => {
 export const showLocalError = (message, element) => {
     const markup = `<div class="alert-local alert--error">${message}</div>`;
     element.insertAdjacentHTML('afterbegin', markup);
-}
+};

@@ -10,7 +10,8 @@ const positionMatcher = (position) => {
             return position = "defender";
         case "Нападник":
             return position = "forward";
-        default: return position = 'midfielder';
+        default:
+            return position = 'midfielder';
     }
 };
 
@@ -34,18 +35,13 @@ export const showPlayerSection = () => {
     }
 };
 
-export const renderPlayer = (player) => {
+export const renderPlayer = (player, withStats) => {
     const markup = `
         <li class="player-section__card">
                     <div class="player-face player-front">
                         <figure>
                             <img src="./resources/img/player-card/card-back/${player.imageBack !== '' ? player.imageBack : 'card-default-back.png'}" alt=${player.surname}>
-                            <div class="player-section__card--feature">
-                                <span class="player-section__card--feature-goal player-section__card--feature-overall ${player.goalsPerSeason === 1 ? 'hide__block' : ''}">${player.goalsPerSeason}</span>
-                                <span class="player-section__card--feature-assist player-section__card--feature-overall ${player.assistsPerSeason === 1 ? 'hide__block' : ''}">${player.assistsPerSeason}</span>
-                                <span class="player-section__card--feature-yellow player-section__card--feature-overall ${player.yellowCardsPerSeason === 1 ? 'hide__block' : ''}">${player.yellowCardsPerSeason}</span>
-                                <span class="player-section__card--feature-red player-section__card--feature-overall ${player.redCardsPerSeason === 1 ? 'hide__block' : ''}">${player.redCardsPerSeason}</span>
-                            </div>
+                            ${withStats ? renderStats(player) : null}
                             <div class="player-front--textblock">
                                 <span>#${player.number}</span>
                                 <span>${player.name}</span>
@@ -62,4 +58,17 @@ export const renderPlayer = (player) => {
     `;
 
     elements.playerSection[positionMatcher(player.position)].insertAdjacentHTML('afterbegin', markup);
+};
+
+const renderStats = (player) => {
+    const markup = `
+        <div class="player-section__card--feature">
+            <span class="player-section__card--feature-goal player-section__card--feature-overall ${player.goalsPerSeason === 1 ? 'hide__block' : ''}">${player.goalsPerSeason}</span>
+            <span class="player-section__card--feature-assist player-section__card--feature-overall ${player.assistsPerSeason === 1 ? 'hide__block' : ''}">${player.assistsPerSeason}</span>
+            <span class="player-section__card--feature-yellow player-section__card--feature-overall ${player.yellowCardsPerSeason === 1 ? 'hide__block' : ''}">${player.yellowCardsPerSeason}</span>
+            <span class="player-section__card--feature-red player-section__card--feature-overall ${player.redCardsPerSeason === 1 ? 'hide__block' : ''}">${player.redCardsPerSeason}</span>
+        </div>                         
+  `;
+
+    return markup;
 };

@@ -22,7 +22,7 @@ export const renderHistoryItem = (history) => {
                         <div class="history-item__heading--center">
                             <h5>${!history.event.description[0] ? '' : history.event.description[0]}</h5>
                         </div>
-                    <img src="./resources/img/teams/${history.event.img[0] ? history.event.img[0] : history.cup.img[0]}" class="history-item__img history-item__img--left ${history.event.img[0] ? 'hide__block' : ''}">
+                    <img src="./resources/img/history/cups/${history.event.img[0] ? history.event.img[0] : history.cup.img[0]}" class="history-item__img history-item__img--left ${history.event.img[0] ? 'hide__block' : ''}">
                 </li>
                 <li class="history-item history-item__custom--right">
                         <h4 class="history-item__heading  history-item__heading--top history-item__heading--top-right">
@@ -31,7 +31,7 @@ export const renderHistoryItem = (history) => {
                         <div class="history-item__heading--center">
                             <h5>${!history.event.description[1] ? '' : history.event.description[1]}</h5>
                         </div>
-                    <img src="./resources/img/teams/${history.event.img[1] ? history.event.img[1] : history.cup.img[1]}" class="history-item__img history-item__img--right ${history.event.img[1] ? 'hide__block' : ''}">
+                    <img src="./resources/img/history/cups/${history.event.img[1] ? history.event.img[1] : history.cup.img[1]}" class="history-item__img history-item__img--right ${history.event.img[1] ? 'hide__block' : ''}">
                 </li>
                 <li class="history-item">
                         <h4 class="history-item__heading history-item__heading--bottom history-item__heading--top-left">
@@ -40,7 +40,7 @@ export const renderHistoryItem = (history) => {
                     <div class="history-item__heading--bottom-center">
                         <h5>${history.mvp}</h5>
                     </div>
-                    <img src="./resources/img/teams/${history.mvpPhoto}" alt="MVP" class="history-item__img history-item__img--right">
+                    <img src="./resources/img/history/mvp/${history.mvpPhoto}" alt="MVP" class="history-item__img history-item__img--right">
                 </li>
             </ul>
         </div>

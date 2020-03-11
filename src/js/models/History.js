@@ -7,7 +7,7 @@ export default class  {
     async getAllHistory() {
             const res = await axios(`${apiRoot}/teams/`, {
                 params: {
-                    ID: '5dae01fde5fd6921e0af71cb'
+                    ID: '5e67ea504c4e6519cc40aab3'
                 }
             });
             return res.data.data.team[0].history;

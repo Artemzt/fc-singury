@@ -6,8 +6,9 @@
   "scripts": {
     "compile:sass": "node-sass src/sass/main.scss dist/css/style.css -w",
     "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "build": "webpack --env.mode=production",
+    "watch": "webpack-dev-server --env.mode=production --open",
+    "start": "webpack-dev-server --env.mode=production"
   },
   "author": "artemso",
   "license": "ISC",

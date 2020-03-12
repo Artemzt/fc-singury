@@ -320,6 +320,10 @@ a.show-more:active{
   border-radius: 30px;
   background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
 
+  @include respond(phone) {
+    font-size: .7rem;
+  }
+
   &:hover,
   &:active{
     background-position: right center; /* change the direction of the change here */
@@ -331,6 +335,10 @@ a.show-more:active{
   position: relative;
   font-size: 1em;
   z-index: 10;
+
+  @include respond(phone) {
+    font-size: 1.4em;
+  }
 }
 
 

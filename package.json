@@ -2,14 +2,14 @@
   "name": "fc-singury",
   "version": "1.0.0",
   "description": "Singury's football team site",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "compile:sass": "node-sass src/sass/main.scss dist/css/style.css -w",
     "dev": "webpack --mode development",
     "build": "webpack --env.mode=production",
     "watch": "webpack-dev-server --env.mode=production --open",
     "start:dev": "webpack-dev-server --env.mode=production",
-    "start": "webpack --env.mode=production"
+    "start": "node server.js"
   },
   "author": "artemso",
   "license": "ISC",
@@ -35,6 +35,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "axios": "^0.19.0",
+    "express": "^4.17.1",
     "jquery": "^3.3.1"
   },
   "engines": {

@@ -331,13 +331,13 @@ a.show-more:active{
 }
 
 .history-button__text {
-  display: block !important;
+  display: block;
   position: relative; /* to make z-index work */
   font-size: 1em;
   z-index: 10;
 
   @include respond(phone) {
-    font-size: 1.4em;
+    font-size: 0.7rem;
   }
 }
 

@@ -132,6 +132,11 @@
       position: relative;
       margin: 2rem 0 3rem 0;
 
+
+      @include respond(phone) {
+      margin: 2rem 0 3rem 3em;
+    }
+
       &:nth-child(2n+1) {
 
         @include respond(small-phone) {

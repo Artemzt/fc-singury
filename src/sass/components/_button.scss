@@ -321,7 +321,6 @@ a.show-more:active{
 
   @include respond(phone) {
     font-size: .7rem;
-    padding: 1rem 2.5rem;
   }
 
   &:hover,
@@ -339,5 +338,34 @@ a.show-more:active{
       font-size: 0.7rem;
     }
   }
+}
+
+.share_btn{
+  display: inline-block;
+  text-decoration: none;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1rem;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px hsla(0,0%,100%,.66);
+  box-shadow: 0 1px 1px rgba(0,0,0,.28);
+  transition: .3s;
+}
+.share_btn .fa{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.share_btn:hover{
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.28);
+  transform: translateY(-5px);
+}
+.shtw {
+  color: #22b8ff;
+  background-image: linear-gradient(#aeecff 0%, #57c8ff 100%);
 }
 

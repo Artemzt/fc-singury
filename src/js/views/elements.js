@@ -18,5 +18,5 @@ export const elements = {
 export const elementStrings = {
     spinner: 'spinner',
     historySlider: 'history-slider',
-    animatedButton: 'year-link',
+    animatedButton: 'fn-year-link',
 };

@@ -1,4 +1,5 @@
 import {elements, elementStrings} from './elements';
+import MobileDetect from 'mobile-detect';
 
 export const renderHistoryItem = (history) => {
     const markup = `
@@ -50,13 +51,26 @@ export const renderHistoryItem = (history) => {
 };
 
 export const renderHistoryControls = (history) => {
-    const markup = `
-    <li class="years-block-conteiner--year year__photo--2017">
-        <a href="#${history.year}" class="year-link years-block__button">
-            <p class="history-button__text">${history.year}</p>
-         </a>
-    </li>
+    const deviceDetect = new MobileDetect(window.navigator.userAgent);
+    let markup;
+    if (deviceDetect.is('iPhone')) {
+        markup = `
+        <li class="years-block-conteiner--year-new">
+            <a href="#${history.year}" class="share_btn shtw fn-year-link">
+                <span class="fa fa-twitter">${history.year}</span>
+            </a>
+        </li>
 `;
+    } else {
+        markup = `
+        <li class="years-block-conteiner--year year__photo--2017">
+            <a href="#${history.year}" class="year-link fn-year-link years-block__button">
+                <p class="history-button__text">${history.year}</p>
+             </a>
+        </li>
+`;
+    }
+
     elements.historyYearsBlock.insertAdjacentHTML('afterbegin', markup);
 };
 
@@ -74,7 +88,6 @@ export const showHistoryItem = () => {
                     historySlider[j].classList.remove('active');
                     historySlider[j].classList.add('inactive');
                 }
-
             }
 
             historySlider[i].classList.remove('inactive');

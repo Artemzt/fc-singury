@@ -53,7 +53,7 @@ export const renderHistoryControls = (history) => {
     const markup = `
     <li class="years-block-conteiner--year year__photo--2017">
         <a href="#${history.year}" class="year-link years-block__button">
-            <span class="history-button__text">${history.year}</span>
+            <p class="history-button__text">${history.year}</p>
          </a>
     </li>
 `;

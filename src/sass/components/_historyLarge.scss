@@ -148,6 +148,23 @@
         font-size: 37.5%;
       }
     }
+
+    &--year-new {
+      text-align: center;
+      position: relative;
+      margin: 2rem 0 3rem;
+
+      &:nth-child(2n+1) {
+
+        @include respond(small-phone) {
+          margin-top: 4rem;
+        }
+      }
+
+      @include respond(phone) {
+        font-size: 37.5%;
+      }
+    }
   }
 }
 

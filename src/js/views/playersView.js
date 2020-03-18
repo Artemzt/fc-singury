@@ -43,7 +43,7 @@ export const renderPlayer = (player, withStats) => {
                             <img src="./resources/img/player-card/card-back/${player.imageBack !== '' ? player.imageBack : 'card-default-back.png'}" alt=${player.surname}>
                             ${withStats ? renderStats(player) : null}
                             <div class="player-front--textblock">
-                                <span>#${player.number}</span>
+                                <span>${player.number}</span>
                                 <span>${player.name}</span>
                                 <span>${player.surname}</span>
                             </div>

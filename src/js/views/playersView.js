@@ -19,16 +19,16 @@ export const showPlayerSection = () => {
 
     for (let i = 0; i < elements.showMoreButton.length; i++) {
         elements.showMoreButton[i].addEventListener('click', function (e) {
-            e.target.parentElement.parentElement.nextElementSibling.style.display = 'block';
-            e.target.style.display = 'none';
-            e.target.nextElementSibling.style.display = 'inline';
+            e.currentTarget.parentElement.parentElement.nextElementSibling.style.display = 'block';
+            e.currentTarget.style.display = 'none';
+            e.currentTarget.nextElementSibling.style.display = 'inline';
 
         }, false);
 
         elements.showLessButton[i].addEventListener('click', function (e) {
-            e.target.parentElement.parentElement.nextElementSibling.style.display = 'none';
-            e.target.style.display = 'none';
-            e.target.previousElementSibling.style.display = 'inline';
+            e.currentTarget.parentElement.parentElement.nextElementSibling.style.display = 'none';
+            e.currentTarget.style.display = 'none';
+            e.currentTarget.previousElementSibling.style.display = 'inline';
 
 
         }, false);

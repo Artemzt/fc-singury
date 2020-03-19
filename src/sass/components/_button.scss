@@ -369,3 +369,9 @@ a.show-more:active{
   background-image: linear-gradient(#aeecff 0%, #57c8ff 100%);
 }
 
+.section-players h3 {
+  @include textHighlight();
+}
+
+
+

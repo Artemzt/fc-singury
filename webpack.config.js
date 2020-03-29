@@ -24,7 +24,8 @@ module.exports = (env = {}) => {
 
             new CopyWebpackPlugin([
                 {from: 'src/resources/img/', to: 'resources/img/'}
-            ])
+            ]),
+            new CopyWebpackPlugin([{from: 'src/html/', to: ''}])
         ];
 
         if (isProd) {

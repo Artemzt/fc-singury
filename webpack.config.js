@@ -11,7 +11,7 @@ module.exports = (env = {}) => {
     const isDev = mode === 'development';
 
     const getStyleLoaders = () => {
-        return isProd ? MiniCssExtractPlugin.loader : 'style-loader'
+        return isProd ? MiniCssExtractPlugin.loader : MiniCssExtractPlugin.loader
     };
 
     const getPlugins = () => {

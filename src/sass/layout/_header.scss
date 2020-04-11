@@ -10,7 +10,16 @@ header {
     background-attachment: scroll;
     background-image: linear-gradient(rgba($color-black, 0.7), rgba($color-black, 0.3)), url(../resources/img/background/four-o-four.jpg);
 
+    h1 {
+      @include respond(small-phone) {
+        font-size: 1.8rem;
+      }
+    }
   }
+}
+
+.ios header {
+  background-attachment: scroll;
 }
 
 

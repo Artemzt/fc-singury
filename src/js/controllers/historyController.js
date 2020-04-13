@@ -2,10 +2,13 @@ import * as historyView from "./../views/historyView";
 import History from "./../models/History";
 import * as errorView from "../views/errorView";
 import {elements} from "../views/elements";
+import * as spinnerView from "../views/spinnerView";
 
 const historyModel = new History();
 
 export const controlHistory = async () => {
+
+    spinnerView.renderSpinner(elements.historySection);
 
     try {
         // 1) get history data from api
@@ -25,7 +28,8 @@ export const controlHistory = async () => {
         errorView.showLocalError('Ваш запит не було оброблено сервером. Будь-ласка спробуйте ще раз пізніше!', elements.historySection);
     }
 
-
+    //4) clear spinner if loaded
+    spinnerView.clearSpinner(elements.historySection);
 };
 
 export const switchItem = () => {

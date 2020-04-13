@@ -40,7 +40,9 @@ export const renderPlayer = (player, withStats) => {
         <li class="player-section__card">
                     <div class="player-face player-front">
                         <figure>
-                            <img src="./resources/img/player-card/card-back/${player.imageBack !== '' ? player.imageBack : 'card-default-back.png'}" alt=${player.surname}>
+                            <picture>
+                                <img src="./resources/img/player-card/card-back/${player.imageBack !== '' ? player.imageBack : 'card-default-back.png'}" alt=${player.surname}>
+                            </picture>
                             ${withStats ? renderStats(player) : null}
                             <div class="player-front--textblock">
                                 <span>${player.number}</span>
@@ -51,7 +53,9 @@ export const renderPlayer = (player, withStats) => {
                     </div>
                     <div class="player-face player-back">
                         <figure>
-                            <img src="./resources/img/player-card/card-back/${player.imageBack !== '' ? player.imageBack : 'card-default-back.png'}" alt=${player.surname}>
+                            <picture>
+                                <img src="./resources/img/player-card/card-back/${player.imageBack !== '' ? player.imageBack : 'card-default-back.png'}" alt=${player.surname}>
+                            </picture>
                         </figure>
                     </div>
         </li>

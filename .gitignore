@@ -34,8 +34,7 @@
 /reports/
 .sass-cache/
 *.log
-
-
+*.env
 
 #---------------------------------------#
 # IDEs & Editors Ignores                #

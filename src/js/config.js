@@ -1,2 +1,3 @@
-//export const apiRoot = 'http://127.0.0.1:3000/api/v1';
-export const apiRoot = 'https://football-team-api.herokuapp.com/api/v1';
+export const apiRoot = '/api/v1';
+//export const apiRoot = 'http://fc-singury.com.ua/api/v1';
+//export const apiRoot = 'https://football-team-api.herokuapp.com/api/v1';

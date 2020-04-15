@@ -1,4 +1,5 @@
 import {elements, elementStrings} from './elements';
+import {replaceImageToWEBP} from '../utils/index';
 
 const positionMatcher = (position) => {
     switch (position) {
@@ -41,7 +42,8 @@ export const renderPlayer = (player, withStats) => {
                     <div class="player-face player-front">
                         <figure>
                             <picture>
-                                <img src="./resources/img/player-card/card-back/${player.imageBack !== '' ? player.imageBack : 'card-default-back.png'}" alt=${player.surname}>
+                                <source type="image/webp" srcset="./resources/img/player-card/card-back/${player.imageBack !== '' ? replaceImageToWEBP(player.imageBack) : 'card-default-back.webp'}">
+                                <img type="image/png" src="./resources/img/player-card/card-back/${player.imageBack !== '' ? player.imageBack : 'card-default-back.png'}" alt=${player.surname}>
                             </picture>
                             ${withStats ? renderStats(player) : null}
                             <div class="player-front--textblock">

@@ -56,6 +56,7 @@ export const renderPlayer = (player, withStats) => {
                     <div class="player-face player-back">
                         <figure>
                             <picture>
+                                <source type="image/webp" srcset="./resources/img/player-card/card-back/${player.imageBack !== '' ? replaceImageToWEBP(player.imageBack) : 'card-default-back.webp'}">
                                 <img src="./resources/img/player-card/card-back/${player.imageBack !== '' ? player.imageBack : 'card-default-back.png'}" alt=${player.surname}>
                             </picture>
                         </figure>

@@ -28,7 +28,7 @@ export const renderHistoryItem = (history) => {
                             <h5>${!history.event.description[0] ? '' : history.event.description[0]}</h5>
                         </div>
                     <picture>
-                        <source type="image/webp" srcset="./resources/img/history/cups/${history.event.img[0] ? history.event.img[0] : replaceImageToWEBP(history.cup.img[0])}">
+                        <source type="image/webp" srcset="./resources/img/history/cups/${history.event.img[0] ? replaceImageToWEBP(history.event.img[0]) : replaceImageToWEBP(history.cup.img[0])}">
                         <img type="image/png" src="./resources/img/history/cups/${history.event.img[0] ? history.event.img[0] : history.cup.img[0]}" class="history-item__img history-item__img--right ${history.event.img[0] ? 'hide__block' : ''}">
                     </picture>
                 </li>
@@ -40,7 +40,7 @@ export const renderHistoryItem = (history) => {
                             <h5>${!history.event.description[1] ? '' : history.event.description[1]}</h5>
                         </div>
                     <picture>
-                        <source type="image/webp" srcset="./resources/img/history/cups/${history.event.img[1] ? history.event.img[1] : replaceImageToWEBP(history.cup.img[1])}">
+                        <source type="image/webp" srcset="./resources/img/history/cups/${history.event.img[1] ? replaceImageToWEBP(history.event.img[1]) : replaceImageToWEBP(history.cup.img[1])}">
                         <img type="image/png" src="./resources/img/history/cups/${history.event.img[1] ? history.event.img[1] : history.cup.img[1]}" class="history-item__img history-item__img--right ${history.event.img[1] ? 'hide__block' : ''}">
                     </picture>
                 </li>

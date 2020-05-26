@@ -1,5 +1,5 @@
 import {elements, elementStrings} from './elements';
-import {replaceImageToWEBP} from '../utils/index';
+import {replaceImageToWEBP, compareDates} from '../utils/index';
 
 const positionMatcher = (position) => {
     switch (position) {
@@ -41,11 +41,12 @@ export const renderPlayer = (player, withStats) => {
         <li class="player-section__card">
                     <div class="player-face player-front">
                         <figure>
+                            ${compareDates(player.dateOfBirth) ? renderBirthday() : ''}
                             <picture>
                                 <source type="image/webp" srcset="./resources/img/player-card/card-back/${player.imageBack !== '' ? replaceImageToWEBP(player.imageBack) : 'card-default-back.webp'}">
                                 <img type="image/png" src="./resources/img/player-card/card-back/${player.imageBack !== '' ? player.imageBack : 'card-default-back.png'}" alt=${player.surname}>
                             </picture>
-                            ${withStats ? renderStats(player) : null}
+                            ${withStats ? renderStats(player) : ''}
                             <div class="player-front--textblock">
                                 <span>${player.number}</span>
                                 <span>${player.name}</span>
@@ -76,6 +77,19 @@ const renderStats = (player) => {
             <span class="player-section__card--feature-red player-section__card--feature-overall ${player.redCardsPerSeason === 1 ? 'hide__block' : ''}">${player.redCardsPerSeason}</span>
         </div>                         
   `;
+
+    return markup;
+};
+
+const renderBirthday = () => {
+    const markup = `
+        <div class="birthdate">
+            <div class="candle">
+               <div id="flame" class="lit"></div>
+            </div>
+            <div class="cake"></div>
+    </div>
+    `;
 
     return markup;
 };

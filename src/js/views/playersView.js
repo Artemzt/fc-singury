@@ -83,11 +83,25 @@ const renderStats = (player) => {
 
 const renderBirthday = () => {
     const markup = `
-        <div class="birthdate">
-            <div class="candle">
+    <div class="birthdate">
+        <div class="" id="bubbleCanvas">
+            <div class="bubbles"></div>
+            <div class="bubbles"></div>
+            <div class="bubbles"></div>
+            <div class="bubbles"></div>
+            <div class="bubbles"></div>
+            <div class="bubbles"></div>
+            <div class="bubbles"></div>
+            <div class="bubbles"></div>
+            <div class="bubbles"></div>
+            <div class="bubbles"></div>
+            <div class="bubbles"></div>
+            <div class="bubbles"></div>
+        </div>
+        <div class="candle">
                <div id="flame" class="lit"></div>
-            </div>
-            <div class="cake"></div>
+        </div>
+        <div class="cake"></div>
     </div>
     `;
 

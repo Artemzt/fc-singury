@@ -7,6 +7,7 @@
 .birthdate {
   perspective: 200rem;
   transform-style: preserve-3d;
+  width: 100%;
   position: absolute;
   bottom: 24%;
   left: 50%;
@@ -35,7 +36,7 @@
   margin: auto;
   width: 5rem;
   height: 2rem;
-  background: #f9fdff;
+  background: pink;
   border-radius: 100%;
   transform: translateZ(100px);
 
@@ -44,13 +45,13 @@
     height: 1.5rem;
   }
 
-  box-shadow: 0 2px 0 #f4f9fd,
-  0 4px 0 #dba9ff,
+  box-shadow: 0 2px 0 deeppink,
+  0 4px 0 pink,
   0 6px 0 #fec3b3,
-  0 8px 0 #f7f6fb,
-  0 10px 0 #f7f6fb,
-  0 12px 0 #f7f6fb,
-  0 14px 0 #f7f6fb,
+  0 8px 0 fuchsia,
+  0 10px 0 yellow,
+  0 12px 0 lightpink,
+  0 14px 0 orangered,
   0 16px 0 #fea0bb,
   0 18px 0 #fea0bb,
   0 20px 0 #9cef9d,
@@ -63,7 +64,7 @@
   height: 2rem;
   width: 1rem;
   margin: auto;
-  background: linear-gradient(0deg, rgba(183, 244, 167, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(0deg, orangered 0%, rgba(255, 255, 255, 1) 100%);
   border-radius: 4px;
   transform: translateZ(120px);
 }
@@ -74,7 +75,7 @@
 }
 
 .lit {
-  background: linear-gradient(180deg, #fff6d9, #fbc36c);
+  background: linear-gradient(180deg, $color-orange, #fbc36c);
   width: 1.2rem;
   height: 3rem;
   border-top-left-radius: 10px 35px;
@@ -114,6 +115,62 @@
   100% {
     transform: skewX(5deg);
     box-shadow: 0 0 17px 10px rgba(251, 246, 190, 0.71);
+  }
+}
+
+/* +++ Currently only tested in latest Chrome & Firefox (e.g. add -webkit- prefix to box-shadow for Safari) +++ */
+$htmlCols: gold, orange, tomato, lightpink, hotpink, violet, rebeccapurple, deepskyblue, aquamarine, lightgreen, lawngreen, lightseagreen, teal, darkturquoise;
+
+$canvasH: 16;
+$bubbleDia: 5;
+//NOTE: if bigger, param for translateY needs to be adjusted too
+
+#bubbleCanvas {
+  position: absolute;
+  width: 100%;
+  height: 300%;
+  overflow: hidden;
+
+  .bubbles {
+    position: absolute;
+    top: $canvasH + 3 + rem;
+    width: $bubbleDia + px;
+    height: $bubbleDia + px;
+    margin-left: -$bubbleDia + px;
+    background: transparent;
+    opacity: 0.8;
+    border-radius: 50%;
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        box-shadow: random(100) + vw (random(10) * -1)+px 0 2 + px #{nth($htmlCols, random(length($htmlCols)))},
+        random(100) + vw (random(20) * -1)+px 0 3 + px #{nth($htmlCols, random(length($htmlCols)))},
+        random(100) + vw (random(30) * -1)+px 0 1 + px #{nth($htmlCols, random(length($htmlCols)))},
+        random(100) + vw (random(5) * -1)+px 0 5 + px #{nth($htmlCols, random(length($htmlCols)))},
+        random(100) + vw (random(18) * -1)+px 0 6 + px #{nth($htmlCols, random(length($htmlCols)))},
+        random(100) + vw (random(30) * -1)+px 0 3 + px #{nth($htmlCols, random(length($htmlCols)))},
+        random(100) + vw (random(12) * -1)+px 0 5 + px #{nth($htmlCols, random(length($htmlCols)))},
+        random(100) + vw (random(30) * -1)+px 0 5 + px #{nth($htmlCols, random(length($htmlCols)))},
+        random(100) + vw (random(40) * -1)+px 0 2 + px #{nth($htmlCols, random(length($htmlCols)))},
+        random(100) + vw (random(10) * -1)+px 0 5 + px #{nth($htmlCols, random(length($htmlCols)))},
+        random(100) + vw (random(20) * -1)+px 0 2 + px #{nth($htmlCols, random(length($htmlCols)))},
+        random(100) + vw (random(4) * -1)+px 0 5 + px #{nth($htmlCols, random(length($htmlCols)))},
+        random(100) + vw (random(20) * -1)+px 0 2 + px #{nth($htmlCols, random(length($htmlCols)))},
+        random(100) + vw (random(30) * -1)+px 0 1 + px #{nth($htmlCols, random(length($htmlCols)))},
+        random(100) + vw (random(4) * -1)+px 0 6 + px #{nth($htmlCols, random(length($htmlCols)))};
+        animation: bubbleUp (random(20) + 10) + s linear random(10) + s infinite;
+      }
+    }
+    //end for
+  }
+  //end bubbles
+}
+
+@keyframes bubbleUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-($canvasH + 4) + rem);
   }
 }
 

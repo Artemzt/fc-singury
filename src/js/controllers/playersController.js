@@ -19,7 +19,7 @@ export const controlPlayers = async () => {
         const allPlayers = await player.getAllPlayers();
         // 3) render each player on UI
         for (let player of allPlayers) {
-            playersView.renderPlayer(player, false);
+            playersView.renderPlayer(player, true);
         }
     }catch (e) {
         // Show error if server does not respond

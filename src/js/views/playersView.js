@@ -71,10 +71,10 @@ export const renderPlayer = (player, withStats) => {
 const renderStats = (player) => {
     const markup = `
         <div class="player-section__card--feature">
-            <span class="player-section__card--feature-goal player-section__card--feature-overall ${player.goalsPerSeason === 1 ? 'hide__block' : ''}">${player.goalsPerSeason}</span>
-            <span class="player-section__card--feature-assist player-section__card--feature-overall ${player.assistsPerSeason === 1 ? 'hide__block' : ''}">${player.assistsPerSeason}</span>
-            <span class="player-section__card--feature-yellow player-section__card--feature-overall ${player.yellowCardsPerSeason === 1 ? 'hide__block' : ''}">${player.yellowCardsPerSeason}</span>
-            <span class="player-section__card--feature-red player-section__card--feature-overall ${player.redCardsPerSeason === 1 ? 'hide__block' : ''}">${player.redCardsPerSeason}</span>
+            <span class="player-section__card--feature-goal player-section__card--feature-overall ${player.goalsPerSeason === 0 ? 'hide__block' : ''}">${player.goalsPerSeason}</span>
+            <span class="player-section__card--feature-assist player-section__card--feature-overall ${player.assistsPerSeason === 0 ? 'hide__block' : ''}">${player.assistsPerSeason}</span>
+            <span class="player-section__card--feature-yellow player-section__card--feature-overall ${player.yellowCardsPerSeason === 0 ? 'hide__block' : ''}">${player.yellowCardsPerSeason}</span>
+            <span class="player-section__card--feature-red player-section__card--feature-overall ${player.redCardsPerSeason === 0 ? 'hide__block' : ''}">${player.redCardsPerSeason}</span>
         </div>                         
   `;
 

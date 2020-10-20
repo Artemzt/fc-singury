@@ -41,7 +41,7 @@ export const renderPlayer = (player, withStats) => {
         <li class="player-section__card">
                     <div class="player-face player-front">
                         <figure>
-                            ${compareDates(player.dateOfBirth) ? renderBirthday() : ''}
+                            ${compareDates(player.dateOfBirth) ? renderBirthday(player.age) : ''}
                             <picture>
                                 <source type="image/webp" srcset="./resources/img/player-card/card-back/${player.imageBack !== '' ? replaceImageToWEBP(player.imageBack) : 'card-default-back.webp'}">
                                 <img type="image/png" src="./resources/img/player-card/card-back/${player.imageBack !== '' ? player.imageBack : 'card-default-back.png'}" alt=${player.surname}>
@@ -81,7 +81,7 @@ const renderStats = (player) => {
     return markup;
 };
 
-const renderBirthday = () => {
+const renderBirthday = (age) => {
     const markup = `
     <div class="birthdate">
         <div class="" id="bubbleCanvas">
@@ -101,7 +101,9 @@ const renderBirthday = () => {
         <div class="candle">
                <div id="flame" class="lit"></div>
         </div>
-        <div class="cake"></div>
+        <div class="cake">
+            <div class="age">${age}</div>
+</div>
     </div>
     `;
 

@@ -58,6 +58,17 @@
   0 22px 0 #9cef9d
 }
 
+.age {
+  font-size: 2.5rem;
+  font-family: 'Roboto';
+  font-weight: 700;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%);
+  text-shadow: 0 2px 2px #fff;
+}
+
 .candle {
   position: relative;
   top: 1rem;

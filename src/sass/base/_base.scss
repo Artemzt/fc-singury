@@ -61,3 +61,11 @@ section {
     opacity: 0;
 }
 
+.prevent-scroll {
+    position: fixed;
+    overflow-y: scroll;
+}
+
+.inactive {
+    display: none!important;
+}

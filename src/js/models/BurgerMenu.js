@@ -2,16 +2,18 @@ export default class {
     constructor() {
     };
 
-    async getBurgerItems() {
+    getBurgerItems() {
         return [
             {
                 name: 'Гравці',
                 alias: 'players',
+                url: '#players'
             },
             {
                 name: 'Історія',
-                alias: 'history'
-            }
+                alias: 'history',
+                url: '#history'
+            },
         ]
     }
 };

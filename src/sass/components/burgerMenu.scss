@@ -63,6 +63,14 @@
         transform: rotate(-45deg);
         transition: transform .3s ease-in-out;
       }
+
+      &:hover .burger__line--bottom {
+        transform: rotate(225deg);
+      }
+
+      &:hover .burger__line--top {
+        transform: rotate(315deg);
+      }
     }
   }
 
@@ -131,8 +139,7 @@
         color: $color-light-yellow;
         white-space: nowrap;
       }
-      &:hover a,
-      & .current-item a {
+      &:hover a {
         transform: translateX(100%);
       }
     }

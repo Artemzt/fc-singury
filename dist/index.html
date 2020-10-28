@@ -6,7 +6,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163406297-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-163406297-1');
@@ -44,15 +48,22 @@
 <header>
     <nav>
         <div class="row">
-            <picture>
-                <source type="image/webp" srcset="./resources/img/logo.webp">
-                <img type="image/png" src="./resources/img/logo.png" alt="Team logo" class="logo">
-            </picture>
-            <div class="main-nav">
-                <ul>
-                    <li><a href="#players">Гравці</a></li>
-                    <li><a href="#history">Історія</a></li>
-                </ul>
+            <div class="top-header__container">
+                <picture>
+                    <source type="image/webp" srcset="./resources/img/logo.webp">
+                    <img type="image/png" src="./resources/img/logo.png" alt="Team logo" class="logo">
+                </picture>
+                <div class="burger-container">
+                    <div class="burger-button">
+                        <div class="burger__line burger__line--top"></div>
+                        <div class="burger__line burger__line--middle"></div>
+                        <div class="burger__line burger__line--bottom"></div>
+                    </div>
+                    <div class="burger-menu inactive">
+<!--                        <div class="burger-menu__item"><a data-hover="Гравці" href="#players">Гравці</a></div>-->
+<!--                        <div class="burger-menu__item"><a data-hover="Історія" href="#history">Історія</a></div>-->
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -71,22 +82,26 @@
     </div>
     <div class="row">
         <div>
-            <h3>Воротарі <a class="show-more highlight-container"><span class="highlight">показати</span></a><a class=" show-less highlight-container"><span class="highlight">приховати</span></a></h3>
+            <h3>Воротарі <a class="show-more highlight-container"><span class="highlight">показати</span></a><a
+                    class=" show-less highlight-container"><span class="highlight">приховати</span></a></h3>
         </div>
         <ul class="player-section player-section__keeper">
         </ul>
         <div>
-            <h3>Захисники<a class="show-more highlight-container"><span class="highlight">показати</span></a><a class=" show-less highlight-container"><span class="highlight">приховати</span></a></h3>
+            <h3>Захисники<a class="show-more highlight-container"><span class="highlight">показати</span></a><a
+                    class=" show-less highlight-container"><span class="highlight">приховати</span></a></h3>
         </div>
         <ul class="player-section player-section__def">
         </ul>
         <div>
-            <h3>Півзахисники <a class="show-more highlight-container"><span class="highlight">показати</span></a><a class=" show-less highlight-container"><span class="highlight">приховати</span></a></h3>
+            <h3>Півзахисники <a class="show-more highlight-container"><span class="highlight">показати</span></a><a
+                    class=" show-less highlight-container"><span class="highlight">приховати</span></a></h3>
         </div>
         <ul class="player-section player-section__mid">
         </ul>
         <div>
-            <h3>Нападники <a class="show-more highlight-container"><span class="highlight">показати</span></a><a class=" show-less highlight-container"><span class="highlight">приховати</span></a></h3>
+            <h3>Нападники <a class="show-more highlight-container"><span class="highlight">показати</span></a><a
+                    class=" show-less highlight-container"><span class="highlight">приховати</span></a></h3>
         </div>
         <ul class="player-section player-section__scorer">
         </ul>

@@ -16,3 +16,12 @@ const setupMenu = () => {
     elements.burgerButton.classList.toggle(elementStrings.burgerActive);
 };
 
+export const renderBurgerItems = (item) => {
+    const markup = `
+    <div class="burger-menu__item">
+        <a data-hover="${item.name}" href="${item.url}">${item.name}</a>
+    </div>
+    `;
+
+    elements.burgerMenu.insertAdjacentHTML('beforeend', markup);
+};

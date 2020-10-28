@@ -12,11 +12,16 @@ export const elements = {
         forward: document.querySelector('.player-section__scorer'),
     },
     historySection:document.querySelector(".section-history"),
-    historyYearsBlock: document.getElementById("years-list")
+    historyYearsBlock: document.getElementById("years-list"),
+    burgerButton: document.querySelector('.burger-button'),
+    burgerMenu: document.querySelector('.burger-menu'),
 };
 
 export const elementStrings = {
     spinner: 'spinner',
     historySlider: 'history-slider',
     animatedButton: 'fn-year-link',
+    burgerActive: 'burger-active',
+    inactive: 'inactive',
+    preventScroll: 'prevent-scroll'
 };

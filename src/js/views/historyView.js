@@ -88,7 +88,6 @@ export const renderHistoryControls = (history) => {
     elements.historyYearsBlock.insertAdjacentHTML('afterbegin', markup);
 };
 
-
 export const showHistoryItem = () => {
     let animatedButton = document.querySelectorAll(`.${elementStrings.animatedButton}`);
     let historySlider = document.querySelectorAll(`.${elementStrings.historySlider}`);

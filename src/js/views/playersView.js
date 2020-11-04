@@ -16,17 +16,57 @@ const positionMatcher = (position) => {
     }
 };
 
-export const showPlayerSection = () => {
+export const renderPlayerSectionSkeleton = () => {
+    const markup = `
+    <section class="section-players" id="players">
+    <div class="row">
+        <h2 class="section-players__heading">Гравці Команди</h2>
+    </div>
+    <div class="row">
+        <div>
+            <h3>Воротарі <a class="show-more highlight-container"><span class="highlight">показати</span></a><a
+                    class=" show-less highlight-container"><span class="highlight">приховати</span></a></h3>
+        </div>
+        <ul class="player-section player-section__keeper">
+        </ul>
+        <div>
+            <h3>Захисники<a class="show-more highlight-container"><span class="highlight">показати</span></a><a
+                    class=" show-less highlight-container"><span class="highlight">приховати</span></a></h3>
+        </div>
+        <ul class="player-section player-section__def">
+        </ul>
+        <div>
+            <h3>Півзахисники <a class="show-more highlight-container"><span class="highlight">показати</span></a><a
+                    class=" show-less highlight-container"><span class="highlight">приховати</span></a></h3>
+        </div>
+        <ul class="player-section player-section__mid">
+        </ul>
+        <div>
+            <h3>Нападники <a class="show-more highlight-container"><span class="highlight">показати</span></a><a
+                    class=" show-less highlight-container"><span class="highlight">приховати</span></a></h3>
+        </div>
+        <ul class="player-section player-section__scorer">
+        </ul>
+    </div>
+</section>
+    `;
 
-    for (let i = 0; i < elements.showMoreButton.length; i++) {
-        elements.showMoreButton[i].addEventListener('click', function (e) {
+    elements.header.insertAdjacentHTML('afterend', markup);
+};
+
+export const showPlayerSection = () => {
+    const showMoreButton = document.querySelectorAll(`.${elementStrings.showMoreButton}`);
+    const showLessButton = document.querySelectorAll(`.${elementStrings.showLessButton}`);
+
+    for (let i = 0; i < showMoreButton.length; i++) {
+        showMoreButton[i].addEventListener('click', function (e) {
             e.currentTarget.parentElement.parentElement.nextElementSibling.style.display = 'block';
             e.currentTarget.style.display = 'none';
             e.currentTarget.nextElementSibling.style.display = 'inline';
 
         }, false);
 
-        elements.showLessButton[i].addEventListener('click', function (e) {
+        showLessButton[i].addEventListener('click', function (e) {
             e.currentTarget.parentElement.parentElement.nextElementSibling.style.display = 'none';
             e.currentTarget.style.display = 'none';
             e.currentTarget.previousElementSibling.style.display = 'inline';
@@ -37,6 +77,7 @@ export const showPlayerSection = () => {
 };
 
 export const renderPlayer = (player, withStats) => {
+    const playerSection = document.getElementById(elementStrings.playersSection);
     const markup = `
         <li class="player-section__card">
                     <div class="player-face player-front">
@@ -65,7 +106,8 @@ export const renderPlayer = (player, withStats) => {
         </li>
     `;
 
-    elements.playerSection[positionMatcher(player.position)].insertAdjacentHTML('afterbegin', markup);
+    const el = document.querySelector(`.${elementStrings.playerSection[positionMatcher(player.position)]}`);
+    el.insertAdjacentHTML('afterbegin', markup);
 };
 
 const renderStats = (player) => {

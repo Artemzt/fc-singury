@@ -6,7 +6,7 @@ header {
   background-position: center;
   height: 100vh;
 
-  &.four-o-four {
+  & .four-o-four {
     background-attachment: scroll;
     background-image: linear-gradient(rgba($color-black, 0.7), rgba($color-black, 0.3)), url(../resources/img/background/four-o-four.jpg);
 

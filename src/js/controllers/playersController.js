@@ -2,15 +2,19 @@ import * as playersView from './../views/playersView';
 import * as spinnerView from './../views/spinnerView';
 import * as errorView from './../views/errorView';
 import Player from './../models/Player';
-import {elements, elementStrings} from '../views/elements';
+import {elementStrings} from '../views/elements';
 
 const player = new Player();
 
 export const controlPlayers = async () => {
+    // 1) render player section skeleton and
+    playersView.renderPlayerSectionSkeleton();
+    const allPlayersSections = document.querySelectorAll(`.${elementStrings.allPlayersSections}`);
+    const playerSection = document.getElementById(elementStrings.playersSection);
 
     // 1) render players section template and show spinner
     playersView.showPlayerSection();
-    for (let el of elements.allPlayersSections) {
+    for (let el of allPlayersSections) {
         spinnerView.renderSpinner(el);
     }
 
@@ -23,10 +27,10 @@ export const controlPlayers = async () => {
         }
     }catch (e) {
         // Show error if server does not respond
-        errorView.showLocalError('Ваш запит не було оброблено сервером. Будь-ласка спробуйте ще раз пізніше!', elements.playersSection);
+        errorView.showLocalError('Ваш запит не було оброблено сервером. Будь-ласка спробуйте ще раз пізніше!', playerSection);
     }
 
-    for (let el of elements.allPlayersSections) {
+    for (let el of allPlayersSections) {
         spinnerView.clearSpinner(el);
     }
 };

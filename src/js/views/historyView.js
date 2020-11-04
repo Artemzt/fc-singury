@@ -2,7 +2,20 @@ import {elements, elementStrings} from './elements';
 import MobileDetect from 'mobile-detect';
 import {replaceImageToWEBP} from "../utils";
 
+export const renderHistorySectionSkeleton = () => {
+    const markup = `
+    <section class="section-history" id="history">
+    <div class="years-block">
+        <ul class="years-block-conteiner" id="years-list">
+        </ul>
+    </div>
+</section>`;
+
+    elements.body.insertAdjacentHTML('beforeend', markup);
+};
+
 export const renderHistoryItem = (history) => {
+    const historySection = document.querySelector(`.${elementStrings.historySection}`);
     const markup = `
     <div class="history__slider history-slider label__container ${history.year === 2018 ? 'active' : 'inactive'}" id="${history.year}">
                 <div class="label">
@@ -61,10 +74,11 @@ export const renderHistoryItem = (history) => {
         </div>
     `;
 
-    elements.historySection.insertAdjacentHTML('afterbegin', markup);
+    historySection.insertAdjacentHTML('afterbegin', markup);
 };
 
 export const renderHistoryControls = (history) => {
+    const historyYearsBlock = document.getElementById(elementStrings.historyYearsBlock);
     const deviceDetect = new MobileDetect(window.navigator.userAgent);
     let markup;
     if (deviceDetect.is('iPhone')) {
@@ -85,7 +99,7 @@ export const renderHistoryControls = (history) => {
 `;
     }
 
-    elements.historyYearsBlock.insertAdjacentHTML('afterbegin', markup);
+    historyYearsBlock.insertAdjacentHTML('afterbegin', markup);
 };
 
 export const showHistoryItem = () => {

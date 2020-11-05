@@ -2,15 +2,15 @@ import * as playersView from './../views/playersView';
 import * as spinnerView from './../views/spinnerView';
 import * as errorView from './../views/errorView';
 import Player from './../models/Player';
-import {elementStrings} from '../views/elements';
+import {getElement} from '../views/elements';
 
 const player = new Player();
 
 export const controlPlayers = async () => {
     // 1) render player section skeleton and
     playersView.renderPlayerSectionSkeleton();
-    const allPlayersSections = document.querySelectorAll(`.${elementStrings.allPlayersSections}`);
-    const playerSection = document.getElementById(elementStrings.playersSection);
+    const allPlayersSections = getElement.allPlayersSections();
+    const playerSection = getElement.playerSection();
 
     // 1) render players section template and show spinner
     playersView.showPlayerSection();

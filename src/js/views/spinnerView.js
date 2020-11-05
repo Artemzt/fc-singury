@@ -1,4 +1,4 @@
-import {elements, elementStrings} from './elements';
+import {getElement} from './elements';
 
 export const renderSpinner = (parentElem) => {
     const spinner = `
@@ -12,7 +12,7 @@ export const renderSpinner = (parentElem) => {
 };
 
 export const clearSpinner = () => {
-    const loader = document.getElementById(`${elementStrings.spinner}`);
+    const loader = getElement.spinner();
     if (loader) {
         loader.parentElement.removeChild(loader);
     }

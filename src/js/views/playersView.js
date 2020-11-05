@@ -1,4 +1,4 @@
-import {elements, elementStrings} from './elements';
+import {elements, getElement} from './elements';
 import {replaceImageToWEBP, compareDates} from '../utils/index';
 
 const positionMatcher = (position) => {
@@ -8,9 +8,9 @@ const positionMatcher = (position) => {
         case "Півзахисник":
             return position = 'midfielder';
         case "Захисник":
-            return position = "defender";
+            return position = 'defender';
         case "Нападник":
-            return position = "forward";
+            return position = 'forward';
         default:
             return position = 'midfielder';
     }
@@ -55,18 +55,18 @@ export const renderPlayerSectionSkeleton = () => {
 };
 
 export const showPlayerSection = () => {
-    const showMoreButton = document.querySelectorAll(`.${elementStrings.showMoreButton}`);
-    const showLessButton = document.querySelectorAll(`.${elementStrings.showLessButton}`);
+    const showMoreButtons = getElement.showMoreButtons();
+    const showLessButtons = getElement.showLessButtons();
 
-    for (let i = 0; i < showMoreButton.length; i++) {
-        showMoreButton[i].addEventListener('click', function (e) {
+    for (let i = 0; i < showMoreButtons.length; i++) {
+        showMoreButtons[i].addEventListener('click', function (e) {
             e.currentTarget.parentElement.parentElement.nextElementSibling.style.display = 'block';
             e.currentTarget.style.display = 'none';
             e.currentTarget.nextElementSibling.style.display = 'inline';
 
         }, false);
 
-        showLessButton[i].addEventListener('click', function (e) {
+        showLessButtons[i].addEventListener('click', function (e) {
             e.currentTarget.parentElement.parentElement.nextElementSibling.style.display = 'none';
             e.currentTarget.style.display = 'none';
             e.currentTarget.previousElementSibling.style.display = 'inline';
@@ -77,7 +77,6 @@ export const showPlayerSection = () => {
 };
 
 export const renderPlayer = (player, withStats) => {
-    const playerSection = document.getElementById(elementStrings.playersSection);
     const markup = `
         <li class="player-section__card">
                     <div class="player-face player-front">
@@ -106,7 +105,7 @@ export const renderPlayer = (player, withStats) => {
         </li>
     `;
 
-    const el = document.querySelector(`.${elementStrings.playerSection[positionMatcher(player.position)]}`);
+    const el = getElement.playersSection[positionMatcher(player.position)]();
     el.insertAdjacentHTML('afterbegin', markup);
 };
 

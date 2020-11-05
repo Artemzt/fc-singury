@@ -1,4 +1,4 @@
-import {elements, elementStrings} from './elements';
+import {elements} from './elements';
 
 export const renderTopMainView = () => {
     const markup = `
@@ -28,7 +28,7 @@ export const renderTopMainView = () => {
         <a class="btn btn-fb" title="Натисніть щоб перейти" target="blank"
            href="https://www.facebook.com/groups/243862829425226/?ref=group_header"><img
                 src="./resources/img/facebook-Button.png" alt="Facebook"></a>
-    </div>`
+    </div>`;
 
     elements.header.insertAdjacentHTML('beforeend', markup);
 };

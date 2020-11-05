@@ -1,4 +1,4 @@
-import {elements, elementStrings} from './elements';
+import {elements} from './elements';
 
 export const renderFooter = () => {
     const markup = `
@@ -23,7 +23,7 @@ export const renderFooter = () => {
                 Grid, Animations and More!</a></p>
     </div>
 
-</footer>`
+</footer>`;
 
     elements.body.insertAdjacentHTML('beforeend', markup);
 };

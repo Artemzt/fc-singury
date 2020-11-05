@@ -1,4 +1,4 @@
-import {elements, elementStrings} from './elements';
+import {elements, getElement} from './elements';
 import MobileDetect from 'mobile-detect';
 import {replaceImageToWEBP} from "../utils";
 
@@ -15,7 +15,7 @@ export const renderHistorySectionSkeleton = () => {
 };
 
 export const renderHistoryItem = (history) => {
-    const historySection = document.querySelector(`.${elementStrings.historySection}`);
+    const historySection = getElement.historySection();
     const markup = `
     <div class="history__slider history-slider label__container ${history.year === 2018 ? 'active' : 'inactive'}" id="${history.year}">
                 <div class="label">
@@ -78,7 +78,7 @@ export const renderHistoryItem = (history) => {
 };
 
 export const renderHistoryControls = (history) => {
-    const historyYearsBlock = document.getElementById(elementStrings.historyYearsBlock);
+    const historyYearsBlock = getElement.historyYearsBlock();
     const deviceDetect = new MobileDetect(window.navigator.userAgent);
     let markup;
     if (deviceDetect.is('iPhone')) {
@@ -103,8 +103,8 @@ export const renderHistoryControls = (history) => {
 };
 
 export const showHistoryItem = () => {
-    let animatedButton = document.querySelectorAll(`.${elementStrings.animatedButton}`);
-    let historySlider = document.querySelectorAll(`.${elementStrings.historySlider}`);
+    let animatedButton = getElement.animatedButtons();
+    let historySlider = getElement.historySlides();
     for (let i = 0; i < animatedButton.length; i++) {
 
         animatedButton[i].addEventListener('click', function (e) {
@@ -119,9 +119,6 @@ export const showHistoryItem = () => {
 
             historySlider[i].classList.remove('inactive');
             historySlider[i].classList.add('active');
-
         })
     }
 };
-
-

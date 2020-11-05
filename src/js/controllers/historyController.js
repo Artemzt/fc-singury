@@ -1,7 +1,7 @@
 import * as historyView from "./../views/historyView";
 import History from "./../models/History";
 import * as errorView from "../views/errorView";
-import {elements, elementStrings} from "../views/elements";
+import {elements, getElement} from "../views/elements";
 import * as spinnerView from "../views/spinnerView";
 
 const historyModel = new History();
@@ -11,7 +11,7 @@ export const controlHistory = async () => {
     // 1) render history section skeleton
     historyView.renderHistorySectionSkeleton();
 
-    const historySection = document.querySelector(`.${elementStrings.historySection}`);
+    const historySection = getElement.historySection();
 
     // 2) render spinner
     spinnerView.renderSpinner(historySection);

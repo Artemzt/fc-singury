@@ -15,6 +15,9 @@ export const getElement = {
     spinner: () => document.getElementById('spinner'),
     animatedButtons: () => document.querySelectorAll('.fn-year-link'),
 
+    // header
+    headerSection: () => document.querySelector('.top-header__container'),
+
     // burger menu elements
     burgerButton: () => document.querySelector('.burger-button'),
     burgerMenu: () => document.querySelector('.burger-menu'),

@@ -1,4 +1,4 @@
-import {elements} from './elements';
+import {elements, getElement} from './elements';
 
 export const renderTopMainView = () => {
     const markup = `
@@ -9,15 +9,7 @@ export const renderTopMainView = () => {
                     <source type="image/webp" srcset="./resources/img/logo.webp">
                     <img type="image/png" src="./resources/img/logo.png" alt="Team logo" class="logo">
                 </picture>
-                <div class="burger-container">
-                    <div class="burger-button">
-                        <div class="burger__line burger__line--top"></div>
-                        <div class="burger__line burger__line--middle"></div>
-                        <div class="burger__line burger__line--bottom"></div>
-                    </div>
-                    <div class="burger-menu inactive">
-                    </div>
-                </div>
+                
             </div>
         </div>
     </nav>
@@ -31,4 +23,19 @@ export const renderTopMainView = () => {
     </div>`;
 
     elements.header.insertAdjacentHTML('beforeend', markup);
+};
+
+export const renderBurgerIntoTopMain = () => {
+  const markup = `
+  <div class="burger-container">
+                    <div class="burger-button">
+                        <div class="burger__line burger__line--top"></div>
+                        <div class="burger__line burger__line--middle"></div>
+                        <div class="burger__line burger__line--bottom"></div>
+                    </div>
+                    <div class="burger-menu inactive">
+                    </div>
+                </div>`;
+
+  getElement.headerSection().insertAdjacentHTML('beforeend', markup);
 };
